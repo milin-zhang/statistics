@@ -1,4 +1,5 @@
-This is the place where i store my notes on statistics / mathematics for social sciences for myself and perhaps will be adapted to tutorials in the future.
+At some point i realized with statistics, one never truly learn until one organizes all the concepts and equations together in their own way and not just read them on papers.
+This is the place where i store my notes on statistics / mathematics for social sciences for myself from different books and scientific papers. It perhaps will be adapted to tutorials in the future.
 
 ------------------------------------------------------------------------
 
