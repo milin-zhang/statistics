@@ -5,5 +5,22 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Basic concepts
+# Introduction
+
+Goal of this site:
+
+-   organize my own statistical notes mainly focusing on application for social science
+
+-   note down new statistical concepts when reading research papers and how they can contribute to my research
+
+    -   which highly relies on regression analysis and longitudinal data analysis to test hypothesis
+
+The notes taken on this site are rarely my own content, i mainly take notes from following sources:
+
+-   MA course "Multivariate Statistics" handouts by Maud Reveilhac: <https://meth.ikmz.uzh.ch/>
+
+-   Textbooks series of "Discovering Statistics" by Andy Field: <https://discoveringstatistics.com/>
+
+-   Statistics Tutorial by numiqo: <https://numiqo.com/tutorial/get-started>
+
 
