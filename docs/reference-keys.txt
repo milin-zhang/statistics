@@ -2,3 +2,4 @@ basic-concepts
 the-pool-of-tears
 a-caucus-race-and-a-long-tale
 trial-chapter
+trial-chapter-2
