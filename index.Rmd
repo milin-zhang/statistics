@@ -1,4 +1,4 @@
---- 
+---
 title: "statistics for social science"
 author: "Milin Zhang"
 date: "`r Sys.Date()`"
@@ -22,5 +22,3 @@ The notes taken on this site are rarely my own content, i mainly take notes from
 -   Textbooks series of "Discovering Statistics" by Andy Field: <https://discoveringstatistics.com/>
 
 -   Statistics Tutorial by numiqo: <https://numiqo.com/tutorial/get-started>
-
-
