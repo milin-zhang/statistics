@@ -1,5 +1,9 @@
 introduction
-the-pool-of-tears
+basic-concepts
+generating-theories-and-test-them
+theory
+hypothesis
+level-of-measurement
 a-caucus-race-and-a-long-tale
 trial-chapter
 trial-chapter-2

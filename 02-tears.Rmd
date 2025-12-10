@@ -1,2 +1,37 @@
 # basic concepts
 
+## generating theories and test them
+
+### Theory
+
+general prediction ans statements from logical deduction, experience and observations, e.g., Social role theory is a concept in sociology and social psychology that explains how individuals behave based on the roles they occupy in society, such as parent, teacher, or leader. These roles come with specific expectations and norms that guide behavior in various contexts.
+
+### hypothesis
+
+scientific statements that are produced based on theory, which are generally measurable and testable. e..g, from social role theory, we predict that women, following their gender role, are less likely to apply for management role.
+
+-   reject of the hypothesis: falsification.
+
+source: discovering statistics with R, 1.4
+
+## level of measurement
+
+-   categorical variable
+    -   e.g., names of species: human, dog, cat
+    -   binary variable
+        -   yes, no
+        -   1, 0
+    -   nominal var
+        -   e.g., use number to denote categories (multiple possibilities)
+-   ordinal var
+    -   logically ordered categories, e.g., gold, silver, bronze medal
+-   continuous var
+    -   interval var
+        -   5-point likert scale
+    -   ratio var
+        -   e.g., twice as much helpful, etc
+        -   must have a valid, meaningful 0 point
+    -   discreet var
+        -   where one can only take up certain values (e.g., only 1-5 in a 5-point likert scale), not every numerical value possible
+
+source: discovering statistics with R, 1.5.1.2
