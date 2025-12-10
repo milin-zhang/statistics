@@ -4,6 +4,14 @@ generating-theories-and-test-them
 theory
 hypothesis
 level-of-measurement
+validity-and-reliability
+correlational-and-experimental-research
+correlational-cross-sectional-research
+descriptive-data-analysis
+frequency-distribution
+center-of-a-distribution
+dispersion-in-a-distribution
+extrapolate-to-probability-1.7.4
 a-caucus-race-and-a-long-tale
 trial-chapter
 trial-chapter-2

@@ -85,6 +85,18 @@
 <li class="chapter" data-level="2.1.2" data-path="basic-concepts.html"><a href="basic-concepts.html#hypothesis"><i class="fa fa-check"></i><b>2.1.2</b> hypothesis</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="basic-concepts.html"><a href="basic-concepts.html#level-of-measurement"><i class="fa fa-check"></i><b>2.2</b> level of measurement</a></li>
+<li class="chapter" data-level="2.3" data-path="basic-concepts.html"><a href="basic-concepts.html#validity-and-reliability"><i class="fa fa-check"></i><b>2.3</b> validity and reliability</a></li>
+<li class="chapter" data-level="2.4" data-path="basic-concepts.html"><a href="basic-concepts.html#correlational-and-experimental-research"><i class="fa fa-check"></i><b>2.4</b> correlational and experimental research</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="basic-concepts.html"><a href="basic-concepts.html#correlational-cross-sectional-research"><i class="fa fa-check"></i><b>2.4.1</b> correlational / cross-sectional research</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="basic-concepts.html"><a href="basic-concepts.html#descriptive-data-analysis"><i class="fa fa-check"></i><b>2.5</b> descriptive data analysis</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="basic-concepts.html"><a href="basic-concepts.html#frequency-distribution"><i class="fa fa-check"></i><b>2.5.1</b> frequency distribution</a></li>
+<li class="chapter" data-level="2.5.2" data-path="basic-concepts.html"><a href="basic-concepts.html#center-of-a-distribution"><i class="fa fa-check"></i><b>2.5.2</b> center of a distribution</a></li>
+<li class="chapter" data-level="2.5.3" data-path="basic-concepts.html"><a href="basic-concepts.html#dispersion-in-a-distribution"><i class="fa fa-check"></i><b>2.5.3</b> dispersion in a distribution</a></li>
+<li class="chapter" data-level="2.5.4" data-path="basic-concepts.html"><a href="basic-concepts.html#extrapolate-to-probability-1.7.4"><i class="fa fa-check"></i><b>2.5.4</b> extrapolate to probability (1.7.4)</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i><b>3</b> A caucus-race and a long tale</a></li>
 <li class="chapter" data-level="4" data-path="trial-chapter.html"><a href="trial-chapter.html"><i class="fa fa-check"></i><b>4</b> trial chapter</a></li>
@@ -163,7 +175,115 @@
 </ul></li>
 </ul>
 <p>source: discovering statistics with R, 1.5.1.2</p>
+</div>
+<div id="validity-and-reliability" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> validity and reliability<a href="basic-concepts.html#validity-and-reliability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>(criterion) Validity
+<ul>
+<li>if an instrument measures what is designs to measure
+<ul>
+<li>e.g., is this survey question fully capturing people’s amount of DMU?</li>
+</ul></li>
+<li>content validity
+<ul>
+<li>the degree to which individual items represent the construct being measured, and cover the full range of the construct</li>
+</ul></li>
+</ul></li>
+<li>Reliability
+<ul>
+<li>the ability of the measure to produce the same results under the same conditions (replicability / robustness?)</li>
+</ul></li>
+</ul>
+<p>source: discovering statistics with R, 1.5.3</p>
+</div>
+<div id="correlational-and-experimental-research" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> correlational and experimental research<a href="basic-concepts.html#correlational-and-experimental-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="correlational-cross-sectional-research" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> correlational / cross-sectional research<a href="basic-concepts.html#correlational-cross-sectional-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>notion: observe what naturally happens in the world without directly interfering with it, typically work on the phenomena that we cannot easily manipulate</li>
+<li>caveat: problem of proving causal relationship</li>
+<li>stat method: typically measured with regression, correlation
+### experimental</li>
+<li>notion: manipulate certain variable and observe the effect on another</li>
+<li>stat method: typically measured with ANOVA, t-test
+<ul>
+<li>But mathematically , the statistical methods mentioned above are identical</li>
+</ul></li>
+<li>two types of data collection
+<ul>
+<li>between group / between subject design: different group of participants take part in each experimental condition</li>
+<li>within subject / repeated measurement design: different experimental condition on the same group of participants</li>
+</ul></li>
+<li>two types of variation
+<ul>
+<li>systematic: created by specific experimental manipulation, e.g., doing sth to all participants in one condition but not in the other condition</li>
+<li>unsystematic: random factors that exist between the experimental conditions (e.g., group character difference, time of the day) -&gt; try to minimize this</li>
+</ul></li>
+<li>radomization
+<ul>
+<li>counterbalance the systematic variation
+<ul>
+<li>e.g., randomize the order of the conditions to counterbalance the practice effect</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>source: discovering statistics with R, 1.6.1. + 1.6.2.</p>
+</div>
+</div>
+<div id="descriptive-data-analysis" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> descriptive data analysis<a href="basic-concepts.html#descriptive-data-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="frequency-distribution" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> frequency distribution<a href="basic-concepts.html#frequency-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>normal distribution
+<ul>
+<li>skew value and kurtosis value are both 0</li>
+<li>in this case, mean is 0, sd is 1</li>
+</ul></li>
+<li>distortion from normal distribution (plotting out histogram)
+<ul>
+<li>positively skewed (left leaning) and negatively skewed (right leaning)</li>
+<li>positive kurtosis (excessively pointy) and negative kurtosis</li>
+</ul></li>
+</ul>
+</div>
+<div id="center-of-a-distribution" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> center of a distribution<a href="basic-concepts.html#center-of-a-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>mean, mode, and the median</p>
+</div>
+<div id="dispersion-in-a-distribution" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> dispersion in a distribution<a href="basic-concepts.html#dispersion-in-a-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>range: max minus min</li>
+<li>quartiles
+<ul>
+<li>lower quartile</li>
+<li>second quartile: median</li>
+<li>upper quartile</li>
+<li>interquartile: middle 50% of the data</li>
+<li>a common exclusion strategy: keep the interquartile for the analysis, so to exclude extreme scores</li>
+</ul></li>
+</ul>
+</div>
+<div id="extrapolate-to-probability-1.7.4" class="section level3 hasAnchor" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> extrapolate to probability (1.7.4)<a href="basic-concepts.html#extrapolate-to-probability-1.7.4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>researchers have calculated the probability of certain score occurring if they are fitting a perfect normal distribution</li>
+<li>if the data we are using is not normally distributed, we can calculate a z-score and calculate the corresponding probability
+<ul>
+<li>z-score: A z-score, or standard score, indicates how many standard deviations a raw score is from the mean of a population. It is calculated by subtracting the population mean from the raw score and dividing by the population standard deviation.
+<ul>
+<li>select the raw score</li>
+<li>calculate z-score (equation in 1.7.4)</li>
+<li>check in the existing table: the Smaller Portion -&gt; that’s the probability of the value to occur :)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>source: discovering statistics with R, 1.7.</p>
 
+</div>
 </div>
 </div>
             </section>
