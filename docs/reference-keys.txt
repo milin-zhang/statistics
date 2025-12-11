@@ -12,6 +12,13 @@ frequency-distribution
 center-of-a-distribution
 dispersion-in-a-distribution
 extrapolate-to-probability-1.7.4
-a-caucus-race-and-a-long-tale
+statistical-models
+simple-statistic-model
+mean
+going-beyond-sample-data
+calculation-of-se
+confidence-interval
+test-our-hypothesis-with-stats
+five-stages-of-research
 trial-chapter
 trial-chapter-2

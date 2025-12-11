@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 trial chapter | statistics for social science</title>
-  <meta name="description" content="Chapter 4 trial chapter | statistics for social science" />
+  <title>Chapter 3 statistical models | statistics for social science</title>
+  <meta name="description" content="Chapter 3 statistical models | statistics for social science" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 trial chapter | statistics for social science" />
+  <meta property="og:title" content="Chapter 3 statistical models | statistics for social science" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 trial chapter | statistics for social science" />
+  <meta name="twitter:title" content="Chapter 3 statistical models | statistics for social science" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="statistical-models.html"/>
-<link rel="next" href="trial-chapter-2.html"/>
+<link rel="prev" href="basic-concepts.html"/>
+<link rel="next" href="trial-chapter.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -135,17 +135,132 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="trial-chapter" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> trial chapter<a href="trial-chapter.html#trial-chapter" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="statistical-models" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> statistical models<a href="statistical-models.html#statistical-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ul>
+<li>model fit
+we want our model to represent our data collected as well as possible to make our predictions valid.</li>
+<li>types of models
+<ul>
+<li>linear model
+<ul>
+<li>regression, ANOVA both fall under this category</li>
+</ul></li>
+<li>non-linear model</li>
+</ul></li>
+<li>advice
+always plot your data first to observe if there is a linear tendency</li>
+</ul>
+<p>2.2</p>
+<div id="simple-statistic-model" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> simple statistic model<a href="statistical-models.html#simple-statistic-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="mean" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> mean<a href="statistical-models.html#mean" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>…is a very simple statistical model
+### model fit
+… is how well does a model fit our sample data
+- deviance
+- the absolute difference between the model (e.g., mean) and the true data
+- total error
+- sum of all the deviances
+- deviation / sum of squared errors (SS)
+- another measure of model accuracy but is dependent on the amount of data we have
+- variance
+- commonly used, SS / df (degree of freedom)
+- df: number of observations that are free to vary. so in a sample of N, and we try to hold one parameter constant, e.g., the mean, and once we freely vary N - 1 number of values in our sample, the one that’s left must be a fixed number to hold the parameter of mean constant, then the df of this sample is N -1.
+- standard deviation
+- square root of the variance
+- relation to distribution
+- larger standard deviation, the more the data deviate from the mean, and the flatter the distribution looks like</p>
+<p>2.4</p>
+</div>
+</div>
+<div id="going-beyond-sample-data" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> going beyond (sample) data<a href="statistical-models.html#going-beyond-sample-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>… to see if the sample is a good representation of the population
+### standard error
+- population mean
+- sample mean
+- mean of a certain sample
+- sampling variation
+- different sample drawn with different criterion will create different means
+- sampling distribution
+- the distribution of means collected from different sample from the sample population
+- standard error of the mean (SE)
+- standard deviation (see [[2.4 Simple statistic model#Model fit]]) of the mean</p>
+<div id="calculation-of-se" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> calculation of SE<a href="statistical-models.html#calculation-of-se" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>we need to rely on an approximation of the SE.
+- central limit theorem
+- when sample size gets large (&gt; 30), the sampling distribution has a normal distribution with a mean equal to the population mean, and a standard deviation of:
+- standard deviation of a sample of data / square root of the sample size
+- can be used to approximate SE
+- when sample size is small (&lt; 30), the sampling distribution has a t-distribution</p>
+</div>
+<div id="confidence-interval" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> confidence interval<a href="statistical-models.html#confidence-interval" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>definition
+<ul>
+<li>the range of values within which we think the population value will fall
+<ul>
+<li>95% CI of the Pearson’s r: we are 95% sure that the true value lies within this range (the r will be the median / middle point of this range)</li>
+</ul></li>
+</ul></li>
+<li>calculation
+<ul>
+<li>background
+<ul>
+<li>z-score: standard scores from a normal distribution with a mean of 0 and a standard deviation of 1
+<ul>
+<li>95% of the z-scores lie within -1.96 to 1.96 -&gt; i.e., in normally distributed data, the confidence interval of the mean is CI [-1.96, 1.96]</li>
+</ul></li>
+<li>in the case of non-normal distributed data, we can use calculation (equation 2.1) to center the data back to the mean of 0 and then calculate confidence interval of our data (with reference to z-score in normal distribution)
+<ul>
+<li>Lower bound of 95% CI: mean - (1.96 x SE)</li>
+<li>Upper bound of 95% CI: mean + (1.96 x SE)
+<ul>
+<li>if 99% CI, z.score is -2.58 and 2.58</li>
+</ul></li>
+<li>if the mean distribution represents the true mean well, it should have a small CI</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>2.5</p>
+</div>
+</div>
+<div id="test-our-hypothesis-with-stats" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> test our hypothesis with stats<a href="statistical-models.html#test-our-hypothesis-with-stats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="five-stages-of-research" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> five stages of research<a href="statistical-models.html#five-stages-of-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>generate RQ through an initial observation</li>
+<li>generate a theory to explain the initial observation</li>
+<li>generate hypothesis: from theory to testable prediction</li>
+<li>collect data to test theory</li>
+<li>analysis data: fit a statistical model to the data -&gt; test the hypothesis
+### test statistics
+… is the ratio of systematic variances to unsystematic variance / effect to error</li>
+</ol>
+<ul>
+<li>significance and importance
+<ul>
+<li>a var’s effect is significant does not mean that the effect is important ==TBA==
+2.6</li>
+</ul></li>
+</ul>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="statistical-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="trial-chapter-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="basic-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="trial-chapter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -176,7 +291,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/milin-zhang/statistics/edit/main/04-trial.Rmd",
+"link": "https://github.com/milin-zhang/statistics/edit/main/03-race.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -184,7 +299,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/milin-zhang/statistics/blob/main/04-trial.Rmd",
+"link": "https://github.com/milin-zhang/statistics/blob/main/03-race.Rmd",
 "text": null
 },
 "download": null,
