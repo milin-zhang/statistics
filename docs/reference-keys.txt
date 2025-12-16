@@ -7,6 +7,7 @@ level-of-measurement
 validity-and-reliability
 correlational-and-experimental-research
 correlational-cross-sectional-research
+experimental
 descriptive-data-analysis
 frequency-distribution
 center-of-a-distribution
@@ -15,10 +16,17 @@ extrapolate-to-probability-1.7.4
 statistical-models
 simple-statistic-model
 mean
+model-fit
 going-beyond-sample-data
 calculation-of-se
 confidence-interval
 test-our-hypothesis-with-stats
 five-stages-of-research
-trial-chapter
-trial-chapter-2
+statistical-assumptions
+correlation
+regression
+introduction-to-regression
+general-procedure-for-regression-analysis
+interpreting-simple-regression
+multiple-regression-basics
+example-study-i-leung-and-lee-2014

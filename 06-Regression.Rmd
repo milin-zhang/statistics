@@ -1,0 +1,61 @@
+# Regression
+
+## Introduction to regression
+
+## General procedure for regression analysis
+
+## Interpreting simple regression
+
+## Multiple regression basics
+
+### Example study I (Leung and Lee, 2014)
+
+-   Objective
+
+Study the consumption of online alternative media, mainly the drives (predictors) and consequences (impacts) of such consumption.
+
+-   RQ and hypothesis
+
+    -   Hypothesis 1: *Support for democratization* relates positively to Internet alternative media usage.
+
+    -   Hypothesis 2: *Perception of media self-censorship* relates positively to Internet alternative media usage.
+
+    -   Hypothesis 3: *News acquisition via Facebook* relates positively to Internet alternative media usage.
+
+    -   Hypothesis 4: The relationship stipulated in Hypothesis 3 is stronger among *supporters of democratization*.
+
+    -   Hypothesis 5: The relationship stipulated in Hypothesis 3 is stronger among people who *perceive media self-censorship as serious*.
+
+    -   Hypothesis 6: Internet alternative media usage relates positively to *protest participation*.
+
+    -   Hypothesis 7: Internet alternative media usage relates positively to *support for the planned civil disobedience campaign for universal suffrage*.
+
+    -   Hypothesis 8: The relationships stipulated in Hypotheses 6 and 7 are stronger among *supporters of democratization*.
+
+The selection of the variables is based on hypotheses, which were traced essentially back to theories.
+
+-   Method
+
+Data: survey data
+
+Analysis: 
+
+2 hierarchichal regression models targeting different sets of hypos (predictors + impacts).
+
+"The regression model contains all the **controls**, the **main effect variables** for Hypotheses 1 to 3 (i.e., support for democratization, perceived media self-censorship, and news acquisition via social media), and **two interaction terms** for testing Hypotheses 4 and 5 (News acquisition via social media × Support for democratization, and News acquisition via social media × Perceived self-censorship). The interaction terms were centered by means to reduce multicollinearity." (Leung and Lee, 2014, p. 349)
+
+<img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/keung_lee_table1.png" alt="keung_lee_table1" width="500"/>
+
+"We can now turn to the impact of Internet alternative media usage on protest participation and attitude toward civil disobedience as suggested in Hypotheses 6 to 8. Two hierarchical regression analyses were conducted for the purpose. The independent variables are largely the same as those in Table 1. The only exceptions are the omission of perceived media self-censorship (which is not central to explain protest participation) and that the interaction between news acquisition via social media and perceived media self-censorship is replaced by Internet alternative media usage × Support for democratization, the interaction term central to Hypothesis 8. The interaction between news acquisition via social media and support for democratization is retained for illustrative purposes." (Leung and Lee, 2014, p. 351)
+
+------------------------------------------------------------------------
+
+note for further study
+
+-   interaction term as a variable in the regression model, how?
+
+-   why do you need to center the terms by means to reduce multicollinearity?
+
+- classic imputation strategies for missing values ("missing values were replaced by means")
+
+citation: Leung, D. K. K., & Lee, F. L. F. (2014). Cultivating an Active Online Counterpublic: Examining Usage and Political Impact of Internet Alternative Media. The International Journal of Press/Politics, 19(3), 340-359. <https://doi.org/10.1177/1940161214530787> (Original work published 2014)

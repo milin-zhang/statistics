@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>statistics for social science</title>
-  <meta name="description" content="statistics for social science" />
+  <title>Chapter 6 Regression | statistics for social science</title>
+  <meta name="description" content="Chapter 6 Regression | statistics for social science" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="statistics for social science" />
+  <meta property="og:title" content="Chapter 6 Regression | statistics for social science" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="statistics for social science" />
+  <meta name="twitter:title" content="Chapter 6 Regression | statistics for social science" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="correlation.html"/>
 
-<link rel="next" href="basic-concepts.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -147,36 +147,67 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">statistics for social science</h1>
-<p class="author"><em>Milin Zhang</em></p>
-<p class="date"><em>2025-12-16</em></p>
+<div id="regression" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Regression<a href="regression.html#regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-to-regression" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Introduction to regression<a href="regression.html#introduction-to-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Goal of this site:</p>
+<div id="general-procedure-for-regression-analysis" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> General procedure for regression analysis<a href="regression.html#general-procedure-for-regression-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="interpreting-simple-regression" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Interpreting simple regression<a href="regression.html#interpreting-simple-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="multiple-regression-basics" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Multiple regression basics<a href="regression.html#multiple-regression-basics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-study-i-leung-and-lee-2014" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Example study I (Leung and Lee, 2014)<a href="regression.html#example-study-i-leung-and-lee-2014" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><p>organize my own statistical notes mainly focusing on application for social science</p></li>
-<li><p>note down new statistical concepts when reading research papers and how they can contribute to my research</p>
+<li>Objective</li>
+</ul>
+<p>Study the consumption of online alternative media, mainly the drives (predictors) and consequences (impacts) of such consumption.</p>
 <ul>
-<li>which highly relies on regression analysis and longitudinal data analysis to test hypothesis</li>
+<li><p>RQ and hypothesis</p>
+<ul>
+<li><p>Hypothesis 1: <em>Support for democratization</em> relates positively to Internet alternative media usage.</p></li>
+<li><p>Hypothesis 2: <em>Perception of media self-censorship</em> relates positively to Internet alternative media usage.</p></li>
+<li><p>Hypothesis 3: <em>News acquisition via Facebook</em> relates positively to Internet alternative media usage.</p></li>
+<li><p>Hypothesis 4: The relationship stipulated in Hypothesis 3 is stronger among <em>supporters of democratization</em>.</p></li>
+<li><p>Hypothesis 5: The relationship stipulated in Hypothesis 3 is stronger among people who <em>perceive media self-censorship as serious</em>.</p></li>
+<li><p>Hypothesis 6: Internet alternative media usage relates positively to <em>protest participation</em>.</p></li>
+<li><p>Hypothesis 7: Internet alternative media usage relates positively to <em>support for the planned civil disobedience campaign for universal suffrage</em>.</p></li>
+<li><p>Hypothesis 8: The relationships stipulated in Hypotheses 6 and 7 are stronger among <em>supporters of democratization</em>.</p></li>
 </ul></li>
 </ul>
-<p>The notes taken on this site are rarely my own content, i mainly take notes from following sources:</p>
+<p>The selection of the variables is based on hypotheses, which were traced essentially back to theories.</p>
 <ul>
-<li><p>MA course “Multivariate Statistics” handouts by Maud Reveilhac: <a href="https://meth.ikmz.uzh.ch/" class="uri">https://meth.ikmz.uzh.ch/</a></p></li>
-<li><p>Textbooks series of “Discovering Statistics” by Andy Field: <a href="https://discoveringstatistics.com/" class="uri">https://discoveringstatistics.com/</a></p></li>
-<li><p>Statistics Tutorial by numiqo: <a href="https://numiqo.com/tutorial/get-started" class="uri">https://numiqo.com/tutorial/get-started</a></p></li>
+<li>Method</li>
 </ul>
+<p>Data: survey data</p>
+<p>Analysis:</p>
+<p>2 hierarchichal regression models targeting different sets of hypos (predictors + impacts).</p>
+<p>“The regression model contains all the <strong>controls</strong>, the <strong>main effect variables</strong> for Hypotheses 1 to 3 (i.e., support for democratization, perceived media self-censorship, and news acquisition via social media), and <strong>two interaction terms</strong> for testing Hypotheses 4 and 5 (News acquisition via social media × Support for democratization, and News acquisition via social media × Perceived self-censorship). The interaction terms were centered by means to reduce multicollinearity.” (Leung and Lee, 2014, p. 349)</p>
+<p><img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/keung_lee_table1.png" alt="keung_lee_table1" width="500"/></p>
+<p>“We can now turn to the impact of Internet alternative media usage on protest participation and attitude toward civil disobedience as suggested in Hypotheses 6 to 8. Two hierarchical regression analyses were conducted for the purpose. The independent variables are largely the same as those in Table 1. The only exceptions are the omission of perceived media self-censorship (which is not central to explain protest participation) and that the interaction between news acquisition via social media and perceived media self-censorship is replaced by Internet alternative media usage × Support for democratization, the interaction term central to Hypothesis 8. The interaction between news acquisition via social media and support for democratization is retained for illustrative purposes.” (Leung and Lee, 2014, p. 351)</p>
+<hr />
+<p>note for further study</p>
+<ul>
+<li><p>interaction term as a variable in the regression model, how?</p></li>
+<li><p>why do you need to center the terms by means to reduce multicollinearity?</p></li>
+<li><p>classic imputation strategies for missing values (“missing values were replaced by means”)</p></li>
+</ul>
+<p>citation: Leung, D. K. K., &amp; Lee, F. L. F. (2014). Cultivating an Active Online Counterpublic: Examining Usage and Political Impact of Internet Alternative Media. The International Journal of Press/Politics, 19(3), 340-359. <a href="https://doi.org/10.1177/1940161214530787" class="uri">https://doi.org/10.1177/1940161214530787</a> (Original work published 2014)</p>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="correlation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="basic-concepts.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -207,7 +238,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/milin-zhang/statistics/edit/main/index.Rmd",
+"link": "https://github.com/milin-zhang/statistics/edit/main/06-Regression.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -215,7 +246,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/milin-zhang/statistics/blob/main/index.Rmd",
+"link": "https://github.com/milin-zhang/statistics/blob/main/06-Regression.Rmd",
 "text": null
 },
 "download": null,
