@@ -1,0 +1,27 @@
+# Comparing two means (t-test)
+
+## Example studies
+
+### Example study I (Ohme et al., 2016)
+
+-   Research objective
+
+Develope a media exposure tool targeting the high-choice information environment and test the tool in a diary study
+
+-   RQ and hypothesis
+
+    -   RQ1a: What is the response rate of our mobile exposure measurement diary in general and how does it differ between age groups?
+
+-   Method
+
+"RQ 2 asked whether the difference in platform (app or mobile browser) affects the media exposure measured for the respondents. Three t-tests were conducted, testing for differences between respondents using the two platforms.
+
+The first **independent group t-test** revealed that respondents taking the survey in their mobile browser (M = .42, SD = .29) were slightly but significantly exposed to more offline political information than respondents using the app (M = .38, SD = .28); t (1648) = 3.8, p \< .000. The second t-test revealed no significant difference in political online media exposure (t (2376) = −1.8, p \> .05) between respondents using the app (M = .15, SD = .15) and respondents using the mobile browser (M = .14, SD = .16). Likewise, the third t-test showed no significant difference in exposure to political information on social media (t(2376) = 1.5, p \> .05) between respondents using the app (M = .20, SD = .25) and respondents participating via a mobile browser (M = .22, SD = .30). Thus, we only observed a small skew for one of three media exposure types, indicating considerable congruency between platform modes." (Ohme et al., 2016, p.141 - 142)
+
+------------------------------------------------------------------------
+
+note.
+
+-   what is this t (2376) reporting?
+
+citation: Ohme, J., Albaek, E., & H. de Vreese, C. (2016). Exposure Research Going Mobile: A Smartphone-Based Measurement of Media Exposure to Political Information in a Convergent Media Environment. Communication Methods and Measures, 10(2–3), 135–148. <https://doi.org/10.1080/19312458.2016.1150972>

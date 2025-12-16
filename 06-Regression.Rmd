@@ -8,6 +8,8 @@
 
 ## Multiple regression basics
 
+## Example studies
+
 ### Example study I (Leung and Lee, 2014)
 
 -   Objective
@@ -38,15 +40,17 @@ The selection of the variables is based on hypotheses, which were traced essenti
 
 Data: survey data
 
-Analysis: 
+Analysis:
 
 2 hierarchichal regression models targeting different sets of hypos (predictors + impacts).
 
 "The regression model contains all the **controls**, the **main effect variables** for Hypotheses 1 to 3 (i.e., support for democratization, perceived media self-censorship, and news acquisition via social media), and **two interaction terms** for testing Hypotheses 4 and 5 (News acquisition via social media × Support for democratization, and News acquisition via social media × Perceived self-censorship). The interaction terms were centered by means to reduce multicollinearity." (Leung and Lee, 2014, p. 349)
 
-<img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/keung_lee_table1.png" alt="keung_lee_table1" width="500"/>
+<img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/keung_lee_table1.png" width="600"/>
 
 "We can now turn to the impact of Internet alternative media usage on protest participation and attitude toward civil disobedience as suggested in Hypotheses 6 to 8. Two hierarchical regression analyses were conducted for the purpose. The independent variables are largely the same as those in Table 1. The only exceptions are the omission of perceived media self-censorship (which is not central to explain protest participation) and that the interaction between news acquisition via social media and perceived media self-censorship is replaced by Internet alternative media usage × Support for democratization, the interaction term central to Hypothesis 8. The interaction between news acquisition via social media and support for democratization is retained for illustrative purposes." (Leung and Lee, 2014, p. 351)
+
+<img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/keung_lee_table2.png" width="600"/>
 
 ------------------------------------------------------------------------
 
@@ -56,6 +60,8 @@ note for further study
 
 -   why do you need to center the terms by means to reduce multicollinearity?
 
-- classic imputation strategies for missing values ("missing values were replaced by means")
+-   classic imputation strategies for missing values ("missing values were replaced by means")
+
+-   how to interpret R2 and the triangle R2?
 
 citation: Leung, D. K. K., & Lee, F. L. F. (2014). Cultivating an Active Online Counterpublic: Examining Usage and Political Impact of Internet Alternative Media. The International Journal of Press/Politics, 19(3), 340-359. <https://doi.org/10.1177/1940161214530787> (Original work published 2014)

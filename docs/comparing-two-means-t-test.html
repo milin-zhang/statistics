@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Basic Concepts | statistics for social science</title>
-  <meta name="description" content="Chapter 2 Basic Concepts | statistics for social science" />
+  <title>Chapter 8 Comparing two means (t-test) | statistics for social science</title>
+  <meta name="description" content="Chapter 8 Comparing two means (t-test) | statistics for social science" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Basic Concepts | statistics for social science" />
+  <meta property="og:title" content="Chapter 8 Comparing two means (t-test) | statistics for social science" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Basic Concepts | statistics for social science" />
+  <meta name="twitter:title" content="Chapter 8 Comparing two means (t-test) | statistics for social science" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="statistical-models.html"/>
+<link rel="prev" href="logistic-regression.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -156,172 +156,31 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="basic-concepts" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Basic Concepts<a href="basic-concepts.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="generating-theories-and-test-them" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> generating theories and test them<a href="basic-concepts.html#generating-theories-and-test-them" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="theory" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Theory<a href="basic-concepts.html#theory" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>general prediction ans statements from logical deduction, experience and observations, e.g., Social role theory is a concept in sociology and social psychology that explains how individuals behave based on the roles they occupy in society, such as parent, teacher, or leader. These roles come with specific expectations and norms that guide behavior in various contexts.</p>
-</div>
-<div id="hypothesis" class="section level3 hasAnchor" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> hypothesis<a href="basic-concepts.html#hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>scientific statements that are produced based on theory, which are generally measurable and testable. e..g, from social role theory, we predict that women, following their gender role, are less likely to apply for management role.</p>
+<div id="comparing-two-means-t-test" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Comparing two means (t-test)<a href="comparing-two-means-t-test.html#comparing-two-means-t-test" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="example-studies-1" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Example studies<a href="comparing-two-means-t-test.html#example-studies-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-study-i-ohme-et-al.-2016" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Example study I (Ohme et al., 2016)<a href="comparing-two-means-t-test.html#example-study-i-ohme-et-al.-2016" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>reject of the hypothesis: falsification.</li>
+<li>Research objective</li>
 </ul>
-<p>source: discovering statistics with R, 1.4</p>
-</div>
-</div>
-<div id="level-of-measurement" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> level of measurement<a href="basic-concepts.html#level-of-measurement" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Develope a media exposure tool targeting the high-choice information environment and test the tool in a diary study</p>
 <ul>
-<li>categorical variable
+<li><p>RQ and hypothesis</p>
 <ul>
-<li>e.g., names of species: human, dog, cat</li>
-<li>binary variable
-<ul>
-<li>yes, no</li>
-<li>1, 0</li>
+<li>RQ1a: What is the response rate of our mobile exposure measurement diary in general and how does it differ between age groups?</li>
 </ul></li>
-<li>nominal var
-<ul>
-<li>e.g., use number to denote categories (multiple possibilities)</li>
-</ul></li>
-</ul></li>
-<li>ordinal var
-<ul>
-<li>logically ordered categories, e.g., gold, silver, bronze medal</li>
-</ul></li>
-<li>continuous var
-<ul>
-<li>interval var
-<ul>
-<li>5-point likert scale</li>
-</ul></li>
-<li>ratio var
-<ul>
-<li>e.g., twice as much helpful, etc</li>
-<li>must have a valid, meaningful 0 point</li>
-</ul></li>
-<li>discreet var
-<ul>
-<li>where one can only take up certain values (e.g., only 1-5 in a 5-point likert scale), not every numerical value possible</li>
-</ul></li>
-</ul></li>
+<li><p>Method</p></li>
 </ul>
-<p>source: discovering statistics with R, 1.5.1.2</p>
-</div>
-<div id="validity-and-reliability" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> validity and reliability<a href="basic-concepts.html#validity-and-reliability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>“RQ 2 asked whether the difference in platform (app or mobile browser) affects the media exposure measured for the respondents. Three t-tests were conducted, testing for differences between respondents using the two platforms.</p>
+<p>The first <strong>independent group t-test</strong> revealed that respondents taking the survey in their mobile browser (M = .42, SD = .29) were slightly but significantly exposed to more offline political information than respondents using the app (M = .38, SD = .28); t (1648) = 3.8, p &lt; .000. The second t-test revealed no significant difference in political online media exposure (t (2376) = −1.8, p &gt; .05) between respondents using the app (M = .15, SD = .15) and respondents using the mobile browser (M = .14, SD = .16). Likewise, the third t-test showed no significant difference in exposure to political information on social media (t(2376) = 1.5, p &gt; .05) between respondents using the app (M = .20, SD = .25) and respondents participating via a mobile browser (M = .22, SD = .30). Thus, we only observed a small skew for one of three media exposure types, indicating considerable congruency between platform modes.” (Ohme et al., 2016, p.141 - 142)</p>
+<hr />
+<p>note.</p>
 <ul>
-<li>(criterion) Validity
-<ul>
-<li>if an instrument measures what is designs to measure
-<ul>
-<li>e.g., is this survey question fully capturing people’s amount of DMU?</li>
-</ul></li>
-<li>content validity
-<ul>
-<li>the degree to which individual items represent the construct being measured, and cover the full range of the construct</li>
-</ul></li>
-</ul></li>
-<li>Reliability
-<ul>
-<li>the ability of the measure to produce the same results under the same conditions (replicability / robustness?)</li>
-</ul></li>
+<li>what is this t (2376) reporting?</li>
 </ul>
-<p>source: discovering statistics with R, 1.5.3</p>
-</div>
-<div id="correlational-and-experimental-research" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> correlational and experimental research<a href="basic-concepts.html#correlational-and-experimental-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="correlational-cross-sectional-research" class="section level3 hasAnchor" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> correlational / cross-sectional research<a href="basic-concepts.html#correlational-cross-sectional-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>notion: observe what naturally happens in the world without directly interfering with it, typically work on the phenomena that we cannot easily manipulate</li>
-<li>caveat: problem of proving causal relationship</li>
-<li>stat method: typically measured with regression, correlation</li>
-</ul>
-</div>
-<div id="experimental" class="section level3 hasAnchor" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> experimental<a href="basic-concepts.html#experimental" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>notion: manipulate certain variable and observe the effect on another</li>
-<li>stat method: typically measured with ANOVA, t-test
-<ul>
-<li>But mathematically , the statistical methods mentioned above are identical</li>
-</ul></li>
-<li>two types of data collection
-<ul>
-<li>between group / between subject design: different group of participants take part in each experimental condition</li>
-<li>within subject / repeated measurement design: different experimental condition on the same group of participants</li>
-</ul></li>
-<li>two types of variation
-<ul>
-<li>systematic: created by specific experimental manipulation, e.g., doing sth to all participants in one condition but not in the other condition</li>
-<li>unsystematic: random factors that exist between the experimental conditions (e.g., group character difference, time of the day) -&gt; try to minimize this</li>
-</ul></li>
-<li>radomization
-<ul>
-<li>counterbalance the systematic variation
-<ul>
-<li>e.g., randomize the order of the conditions to counterbalance the practice effect</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>source: discovering statistics with R, 1.6.1. + 1.6.2.</p>
-</div>
-</div>
-<div id="descriptive-data-analysis" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> descriptive data analysis<a href="basic-concepts.html#descriptive-data-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="frequency-distribution" class="section level3 hasAnchor" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> frequency distribution<a href="basic-concepts.html#frequency-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>normal distribution
-<ul>
-<li>skew value and kurtosis value are both 0</li>
-<li>in this case, mean is 0, sd is 1</li>
-</ul></li>
-<li>distortion from normal distribution (plotting out histogram)
-<ul>
-<li>positively skewed (left leaning) and negatively skewed (right leaning)</li>
-<li>positive kurtosis (excessively pointy) and negative kurtosis</li>
-</ul></li>
-</ul>
-</div>
-<div id="center-of-a-distribution" class="section level3 hasAnchor" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> center of a distribution<a href="basic-concepts.html#center-of-a-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>mean, mode, and the median</p>
-</div>
-<div id="dispersion-in-a-distribution" class="section level3 hasAnchor" number="2.5.3">
-<h3><span class="header-section-number">2.5.3</span> dispersion in a distribution<a href="basic-concepts.html#dispersion-in-a-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>range: max minus min</li>
-<li>quartiles
-<ul>
-<li>lower quartile</li>
-<li>second quartile: median</li>
-<li>upper quartile</li>
-<li>interquartile: middle 50% of the data</li>
-<li>a common exclusion strategy: keep the interquartile for the analysis, so to exclude extreme scores</li>
-</ul></li>
-</ul>
-</div>
-<div id="extrapolate-to-probability-1.7.4" class="section level3 hasAnchor" number="2.5.4">
-<h3><span class="header-section-number">2.5.4</span> extrapolate to probability (1.7.4)<a href="basic-concepts.html#extrapolate-to-probability-1.7.4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>researchers have calculated the probability of certain score occurring if they are fitting a perfect normal distribution</li>
-<li>if the data we are using is not normally distributed, we can calculate a z-score and calculate the corresponding probability
-<ul>
-<li>z-score: A z-score, or standard score, indicates how many standard deviations a raw score is from the mean of a population. It is calculated by subtracting the population mean from the raw score and dividing by the population standard deviation.
-<ul>
-<li>select the raw score</li>
-<li>calculate z-score (equation in 1.7.4)</li>
-<li>check in the existing table: the Smaller Portion -&gt; that’s the probability of the value to occur :)</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>source: discovering statistics with R, 1.7.</p>
+<p>citation: Ohme, J., Albaek, E., &amp; H. de Vreese, C. (2016). Exposure Research Going Mobile: A Smartphone-Based Measurement of Media Exposure to Political Information in a Convergent Media Environment. Communication Methods and Measures, 10(2–3), 135–148. <a href="https://doi.org/10.1080/19312458.2016.1150972" class="uri">https://doi.org/10.1080/19312458.2016.1150972</a></p>
 
 </div>
 </div>
@@ -331,8 +190,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="statistical-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="logistic-regression.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -363,7 +222,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/milin-zhang/statistics/edit/main/02-basic-concepts.Rmd",
+"link": "https://github.com/milin-zhang/statistics/edit/main/09-comparing-two-means.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -371,7 +230,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/milin-zhang/statistics/blob/main/02-basic-concepts.Rmd",
+"link": "https://github.com/milin-zhang/statistics/blob/main/09-comparing-two-means.Rmd",
 "text": null
 },
 "download": null,

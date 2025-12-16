@@ -29,4 +29,9 @@ introduction-to-regression
 general-procedure-for-regression-analysis
 interpreting-simple-regression
 multiple-regression-basics
+example-studies
 example-study-i-leung-and-lee-2014
+logistic-regression
+comparing-two-means-t-test
+example-studies-1
+example-study-i-ohme-et-al.-2016
