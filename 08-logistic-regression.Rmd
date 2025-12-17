@@ -1,1 +1,7 @@
 # Logistic regression
+
+## Example studies
+
+### Example study 1 (Müller & Bach, 2021)
+
+<img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/mueller_bach_2021_fig2.png" width="600"/>

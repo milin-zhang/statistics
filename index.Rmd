@@ -22,3 +22,19 @@ The notes taken on this site are rarely my own content, i mainly take notes from
 -   Textbooks series of "Discovering Statistics" by Andy Field: <https://discoveringstatistics.com/>
 
 -   Statistics Tutorial by numiqo: <https://numiqo.com/tutorial/get-started>
+
+------------------------------------------------------------------------
+
+question marks
+
+1.  what is a hurdle model? -\> particularly useful for data with many zero values
+
+<!-- -->
+
+a.  source: "Preliminary analyses revealed that there is an excess number of cases with zero exposure to alternative news in both data sets. To account for this skewed distribution of our criterion variable, we opted to use hurdle models (see Mullahy, 1986) to analyze predictors of alternative news use. " (Müller & Bach, 2021)
+
+b.  Mullahy J (1986) Specification and testing of some modified count data models. Journal of Econometrics 33(3): 341–365.
+
+<!-- -->
+
+2.  what does "Locally weighted scatterplot smoothing (LOWESS) trend lines with alpha = .2." mean?
