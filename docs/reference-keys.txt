@@ -23,6 +23,16 @@ confidence-interval
 test-our-hypothesis-with-stats
 five-stages-of-research
 statistical-assumptions
+assumption-of-parametric-data
+the-assumption-of-normality
+observing-normality
+quantifying-normality
+testing-normality
+the-assumption-of-homogeneity-of-variance
+testing-homogeneity-of-variance
+correcting-problems-in-the-data
+transforming-data
+if-everything-is-still-horribly-wrong
 correlation
 regression
 introduction-to-regression

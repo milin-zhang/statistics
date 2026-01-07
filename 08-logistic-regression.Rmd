@@ -4,4 +4,13 @@
 
 ### Example study 1 (Müller & Bach, 2021)
 
+"Preliminary analyses revealed that there is an excess number of cases with zero exposure to alternative news in both data sets. To account for this skewed distribution of our criterion variable, we opted to use hurdle models (see Mullahy, 1986) to analyze predictors of alternative news use. " (Müller & Bach, 2021)
+
+what is a hurdle model? -> particularly useful for data with many zero values
+
+
+Mullahy J (1986) Specification and testing of some modified count data models. Journal of Econometrics 33(3): 341–365.
+
+supplementary materials: https://osf.io/67rwq/overview
+
 <img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/mueller_bach_2021_fig2.png" width="600"/>

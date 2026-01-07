@@ -1,2 +1,158 @@
 # Statistical assumptions
 
+Fantastic assumptions and how to test them :)
+
+## Assumption of parametric data
+
+Most of the statistical tests in the following chapters are parametric tests based on normal distribution. In order to draw meaningful results from parametric tests, certain assumptions have to be met.
+
+1.  Normally distributed data
+2.  Homogeneity of variance
+3.  Interval data To say that data are interval, we must be certain that equal intervals on the scale represent equal differences in the property being measured. (e.g., Likert scale)
+4.  Independence
+
+-   e.g., data from each participants are independent in a sense that the behaviour of one participant does not influence the behaviour of another.
+
+-   In regression, this assumption is manifested with the error in regression model being uncorrelated.
+
+In this chapter we focus on the the normal distribution and homogeneity of variance.
+
+## The assumption of normality
+
+... is important for many statistical tests, such as t-test and regression analysis. recap: normal distribution of a sample can be extrapolated to approximate normal distribution of the sampling distribution (which is usually what actually matters)
+
+### observing normality
+
+-   plot histogram
+
+-   plot Q-Q plot
+
+as in quantile-quantile plot, a quantile is the proportion of cases we find below a certain value. Normally distributed data should be plotted as a straight diagonal line.
+
+```{r eval=FALSE}
+ggplot2::qplot(sample = df$var, stat = "qq")
+```
+
+### quantifying normality
+
+-   skew
+
+negative values: right-skewed positive values: left-skewed
+
+-   kurtosis
+
+negative values: flatly distributed positive values: pointedly distributed
+
+```{r eval=FALSE}
+psych::describe(sample = df$var)
+
+## hacks: run function on different groups
+by(data = df, INDICES = df$grouping_var, FUN = function_you_want_to_apply)
+```
+
+### testing normality
+
+-   Shapiro-Wilk test
+
+... is a test that compares the targeted sample to a normally distributed scores with the same mean and SD. Therefore, if a Shapiro-Wilk test is non-significant, it means that our sample is not significantly different from a normally distributed counterpart. If significant, it tells us that our data is potentially not normally distributed. Shapiro-Wilk test is easily turning significant when sample size gets large. Always plot your data to corroborate your findings.
+
+```{r eval=FALSE}
+stat::shapiro.test(df&var)
+```
+
+## The assumption of homogeneity of variance
+
+... means that the variances should be the same through out the data. In design in which you test several groups of participants, this assumption means that each of these samples comes from populations with the same variance. (recap: variance is the sum of square errors divided by degree of freedom)
+
+For example, we collected participants' scoring on different climbing gyms at different time points, the spread of the scores around the mean at each level (aka at each time point) should be roughly the same.
+
+### Testing homogeneity of variance
+
+to see if variance is stable within each level/group of the variable.
+
+-   Levene's test
+
+... tests the null hypothesis that variances in different groups are equal. If the Levene's test turns out to be insignificant, the variances are roughly equal between levels, the assumption is tenable.
+
+```{r eval=FALSE}
+car::leveneTest(df&var, # e.g., the scores for climbing gym
+                df$group, # e.g., different time points
+                center = median / mean)
+```
+
+-   Hartley's F max: the variance ratio
+
+To mitigate the diviation caused by large sample size, it's worth to check the variance ratio as well, which is the ratio of variances between the group with the biggest variance and the group with the smallest variance, then the ratio is compared to critical values published by Hartley.
+
+```{r eval=FALSE}
+# option 1
+vartest::hartley.test(formula, data, size = "mean", alpha = 0.05, na.rm = TRUE, verbose = TRUE)
+# option 2
+PMCMRplus::hartleyTest()
+```
+
+## Correcting problems in the data
+
+Once the outliers have been spotted, there are 3 options:
+
+1.  Remove the case. (but only if you have good reason to believe that they don't fit in the sample/population)
+
+2.  Transform the data -\> reduce skewness
+
+3.  Change the score (see more on the section 5.8.1)
+
+<!-- -->
+
+a.  next highest score plus one
+b.  convert back from a z-score
+c.  the mean plus two standard deviation
+
+### Transforming data
+
+Good to know: transforming data as whole won't change the relation between two variables (e.g., regression), but it does change the difference between variables (e.g., descriptive data).
+
+1.  Log transformation (commonly applied)
+
+Definition: Take the logarithm of all numbers. However log transformation does not work on 0 and negative values. Try to transform them before logging them out.
+
+Targeted case: positive skew, unequal variances
+
+How to work in R:
+
+```{r eval=FALSE}
+df$logvar <- log(df$var)
+# the merits of adding 1
+df$logvar <- log(df$var + 1) # so to avoid having ones that scored 1 become 0 after the log transformation
+```
+
+2.  Square root transformation
+
+Definition: Take the square root of all numbers. But the same problem with log tranform persists.
+
+Targeted case: positive skew, unequal variances
+
+How to work in R:
+
+```{r eval=FALSE}
+df$sqrt_var <- sqrt(df$var)
+```
+
+3.  Reciprocal transformation
+
+Definition: dividing 1 by each score. However it change the sequece of the data, to mitigate such effect, you can change the score by minusing the highest score to each score first.
+
+Targeted case: positive skew, unequal variances
+
+4.  Reverse score transformation
+
+Definition: Any transformation above can deal with negative skew, but you need to reverse the score first. (more in section 5.8.1)
+
+Targeted case: negative skew
+
+### If everything is still horribly wrong
+
+- try to choose another method that does not require these assumptions to be met
+
+- robust method and bootstrap
+
+... to be added, section 5.8.4

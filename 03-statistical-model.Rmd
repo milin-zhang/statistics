@@ -39,8 +39,11 @@ editor_options:
 -   deviation / sum of squared errors (SS)
 
     -   another measure of model accuracy but is dependent on the amount
-        of data we have - variance - commonly used, SS / df (degree of
-        freedom)
+        of data we have
+
+-   variance
+
+    -   commonly used, SS / df (degree of freedom)
 
 -   df (degree of freedom)
 
