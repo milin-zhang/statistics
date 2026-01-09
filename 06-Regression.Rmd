@@ -2,6 +2,24 @@
 
 ## Introduction to regression
 
+Regression is one step further from correlation where we predict the outcome (DV) from one or more variables (IV). Depending on the number of IV, there are simple regression and multiple regression.
+
+-   Method of least square
+
+The goal of finding a suitable regression model is usually achieved by finding the least square, namely the smallest residuals (deviations, difference between the real data and the model) from all the possible model out there.
+
+-   Goodness of fit
+
+    -   Sum of squares
+
+  - R
+
+
+
+  - R squares
+
+
+
 ## General procedure for regression analysis
 
 ## Interpreting simple regression
