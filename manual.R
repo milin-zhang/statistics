@@ -14,3 +14,5 @@ browseURL("docs/index.html")
 
 # 4. Open the Github Repo link
 usethis::browse_github()
+
+gitcreds::gitcreds_set()
