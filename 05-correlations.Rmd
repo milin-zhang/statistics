@@ -1,1 +1,213 @@
 # Correlation
+
+## How do we measure relationships
+
+### Defining covariance
+
+Variance -\> square errors divided by degree of freedom
+
+Covariance
+
+-   Essentially, an expression of the relationship between variables, i.e., the relatedness of two variables, i.e., the extent of similarity between patterns of differences of the two variables.
+
+-   is the cross-product deviations (multiplying the deviations of one variable by the corresponding deviation of a second variable) divided by degree of freedom.
+
+-   However, the scale of covariance is dependent on the scale of measurement. Therefore we need a process of *standardization* to set the measurements to the same unit, therefore the numbers are comparable.
+
+### Standardization and the correlation efficient
+
+Standardization
+
+-   Conversion of a value that is dependent on the measurement scale into a standard set of units.
+
+-   To standardize the deviation of the mean from one variable, we can divide the observed deviation by the standard deviation.
+
+    -   recap: standard deviation is the square root of the variance.
+
+-   When there are two variables and we want to standardize the covariance, we can first multiply the two standard deviation of the two variables, and then divide the covariance by the multiplied product. This value is known as *r*, the *correlation coefficient*.
+
+Correlation coefficient
+
+-   aka Pearson product-moment correlation coefficient, or Pearson correlation coefficient
+
+-   Value lies within -1 and 1.
+
+-   ... is an expression of standardized the measure of an observed effect. Commonly, values of ±.1 -\> small effect, ±.3 -\> medium effect, and ±.5 is a large effect.
+
+### Significance of the correlation coefficient
+
+-   To test the hypothesis that the observed coefficient is different from zero
+
+-   We need to transform our r to z.score to observe it in a normal distribution
+
+### Confidence intervals for *r*
+
+### Warning for concluding to causality
+
+We cannot assume causality just for the existence of a significant correlation coefficient.
+
+-   The third-variable problem
+
+-   The unknown direction of causality
+
+## Bivariate correlation
+
+... us a cirrrelation between two variables, including
+
+### Pearson's r
+
+Assumptions:
+
+1.  Interval data
+
+2.  If one wants to prove significance, the sampling distributions need to be normally distributed, that is, our sample data are normally distributed (or if we have a large sample) .
+
+-\> I'm practically lost at this sentence so I asked AI:
+
+a.  The "Sampling Distribution" (The Hypothetical Universe)
+
+When you calculate Pearson's r, you get one number (e.g., r=0.5). But to "prove significance," a computer asks: "If there was actually zero relationship in the real world, how likely is it that I'd accidentally stumble upon an r=0.5 just by luck?"
+
+To answer this, it imagines a sampling distribution—a bell curve of every possible r value you could have gotten from thousands of random samples.
+
+-   The Problem: The math used to calculate your p-value (the t-test) assumes this "hypothetical universe" of results follows a specific, predictable shape (a t-distribution).
+
+-   The Link: If your sample data is normally distributed, the sampling distribution will also be well-behaved and match that math.
+
+b.  The "Large Sample" Escape Hatch
+
+The statement mentions: "...or if we have a large sample." This is a reference to the Central Limit Theorem (CLT).
+
+In statistics, "Large" usually means a sample size of n\>30 (though more is always better). The CLT is like a magic wand: it says that as your sample size grows, the sampling distribution will become normally distributed even if your raw data is messy, skewed, or weird.
+
+-   Why this is a relief: It means you don't need "perfect" data to get a valid p-value, as long as you have enough participants.
+
+How to do it in R:
+
+```{r eval=FALSE}
+cor(x, y, 
+    use = "string", 
+    # everything -> NA for pairs that contain NA
+    # all.obs -> error meassage if there is any NA in the data
+    # complete.obs -> correlations are computed from only cases that are complete for all vars -> more exclusive for NAs
+    # pairwise.complete.obs -> correlations between pairs of bars are computed for cases that are complete for these two vars
+    method = "correlation type"
+    # pearson, spearman, or kendall
+    )
+
+# e.g.,
+cor(df$x, df$y, use = "complete.obs", method = "pearson")
+cor(df[, c(1:3)]) # produce a matrix for three pairs of correlation
+
+# other functions
+cor.test()
+Hmisc::rcorr(x, y, type = "correlation type")
+```
+
+#### Interpreting R square
+
+Correlation coefficient square, aka coefficient of determination, is the square of r coefficient. It measures the amount of variability of one variable that is shared by the other one.
+
+For example, if the coefficient r of bad weather and mood swing is -0.4, the R square will be 0.16. Therefore even though the two vars are nicely correlated, bad weather is still only accounted for 16% of the variation in mood swing. (this is still not an evidence of causality)
+
+### Spearman's rho
+
+Same logic as Pearson's r, but deals with rank data / ordinal data (categories with meaningful order)
+
+```{r eval=FALSE}
+cor(df$x, df$y, use = "complete.obs", method = "spearman")
+```
+
+### Kendall's tau
+
+Similar to Spearman's rho, it deals with non-parametric data, but better suited for cases of small dataset with a large number of tied rank.
+
+### Bootstrap correlations
+
+More in section 6.5.7
+
+```{r eval=FALSE}
+boot(data, function, replications)
+```
+
+### Biserial and point-biserial correlations
+
+- Point-biserial coefficient
+
+For discrete dichonomous variable, i.e., binary variable with no continuum in between 0 and 1 (e.g, pregnancy)
+
+- Biserial coefficient
+
+For variable with continuous dichonomy, where an unterlying continuum exisits between 0 and 1 (e.g., pass and fail, where there are many grades in between)
+
+```{r eval=FALSE}
+library(polycor)
+polycor::polyserial(df&x, df&y)
+```
+
+## Partial correlation
+
+Partial correlation is used when we want to examine the relationship between two variables in which the effect of a third variable is present and held constant. To put it differently, var A accounted for 15% of the variances of var C, var B accounted for 20% of the variances of var C, and there is 5% of variances of var C accounted jointly by var A and B. And then we know that there is 10% of variances of var C accounted uniquely by var A, and 15% of such accounted uniquely by var B.
+
+```{r eval=FALSE}
+library(ggm)
+pc <- ggm::pcor(c(A, B, C), df) # in this case we are looking at the unique variances of A accounted by B, with the effect of C held constant
+pc^2 # R square
+```
+
+Semi-partial correlation, aka part correlation, where the third variable's effect was controlled only for one of the variables in the relationship, and in partial correlation, the effect for both variables in the correlation is controlled.                                   
+
+Therefore, partial correlation is used when one wants to look at the unique relationship between two vars when the third var is completely ruled out, and the semi-partial correlation is used when trying to explain the variance in the outcome from a set of predictor variables. (-> see multiple regression?)
+
+## Comparing correlations
+
+- Independent *r*s
+
+
+r calculated from different samples, e.g., men and women.
+
+We convert these *r*s to z value to make the smapling distribution normal, and then we compare the value. (see the additional material mentioned in p.239 for more information on calculation in R)
+
+- Dependent *r*s
+
+see more at page 239
+
+## Computing effect size and reporting results
+
+First of all, correlation coefficients *are* effect sizes.
+
+However, the R square of Spearman's rho needs to be interpreted slighlty different, as they represent the proportion of variances in the ranks that two vars share. See more at 240
+
+- Syntax of reporting
+
+(1) if you follow the conventions of the American Psychological Association, there should be no zero before the decimal point for the correlation coefficient or the probability value (because neither can exceed 1); 
+
+(2) coefficients are reported to 2 decimal places; 
+
+(3) if you are quoting a one-tailed probability, you should say so; 
+
+(4) each correlation coefficient is represented by a different letter (and some of them are Greek); and 
+
+(5) there are standard criteria of probabilities that we use (.05, .01 and .001).
+
+- Example of reporting correlation
+
+There was a significant relationship between the number of adverts watched and the number of packets of sweets purchased, r = .87, p (one-tailed) < .05.
+
+Exam performance was significantly correlated with exam anxiety, r = −.44, and time spent revising, r = .40; the time spent revising was also correlated with exam anxiety, r = −.71 (all ps < .001).
+
+Creativity was significantly related to how well people did in the World’s Biggest Liar competition, rs = −.37, p < .001.
+
+Creativity was significantly related to how well people did in the World’s Biggest Liar competition, τ = −.30, p < .001. (Note that I’ve quoted Kendall’s
+τ here.)
+
+The gender of the cat was significantly related to the time the cat spent away from home, rpb = .38, p < .01.
+
+The gender of the cat was significantly related to the time the cat spent away from home, rb = .48, p < .01.
+
+---
+Q. is r/r square an expression of effect size?
+
+Q. how come that squaring of r can be the value to represent the percentage of the variability?
+
+Q. why do we need another calculation to compare r?

@@ -127,11 +127,18 @@ we need to rely on an approximation of the SE.
 3.  generate hypothesis: from theory to testable prediction
 4.  collect data to test theory
 5.  analysis data: fit a statistical model to the data -\> test the
-    hypothesis \### test statistics ... is the ratio of systematic
-    variances to unsystematic variance / effect to error
+    hypothesis\
+
+### test statistics
+
+... is the ratio of systematic variances to unsystematic variance /
+effect to error
 
 -   significance and importance
+
     -   a variable's effect is significant does not mean that the effect
-        is important ==TBA==
+        is important
+
+==TBA==
 
 2.6

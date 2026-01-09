@@ -23,7 +23,7 @@
 <meta name="author" content="Milin Zhang" />
 
 
-<meta name="date" content="2026-01-07" />
+<meta name="date" content="2026-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="statistical-assumptions.html"/>
-<link rel="next" href="regression.html"/>
+<link rel="next" href="logistic-regression.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -179,6 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3" data-path="statistical-models.html"><a href="statistical-models.html#test-our-hypothesis-with-stats"><i class="fa fa-check"></i><b>3.3</b> test our hypothesis with stats</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="statistical-models.html"><a href="statistical-models.html#five-stages-of-research"><i class="fa fa-check"></i><b>3.3.1</b> five stages of research</a></li>
+<li class="chapter" data-level="3.3.2" data-path="statistical-models.html"><a href="statistical-models.html#test-statistics"><i class="fa fa-check"></i><b>3.3.2</b> test statistics</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="statistical-assumptions.html"><a href="statistical-assumptions.html"><i class="fa fa-check"></i><b>4</b> Statistical assumptions</a>
@@ -200,30 +201,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.2" data-path="statistical-assumptions.html"><a href="statistical-assumptions.html#if-everything-is-still-horribly-wrong"><i class="fa fa-check"></i><b>4.4.2</b> If everything is still horribly wrong</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>5</b> Correlation</a></li>
-<li class="chapter" data-level="6" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>6</b> Regression</a>
+<li class="chapter" data-level="5" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>5</b> Correlation</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="regression.html"><a href="regression.html#introduction-to-regression"><i class="fa fa-check"></i><b>6.1</b> Introduction to regression</a></li>
-<li class="chapter" data-level="6.2" data-path="regression.html"><a href="regression.html#general-procedure-for-regression-analysis"><i class="fa fa-check"></i><b>6.2</b> General procedure for regression analysis</a></li>
-<li class="chapter" data-level="6.3" data-path="regression.html"><a href="regression.html#interpreting-simple-regression"><i class="fa fa-check"></i><b>6.3</b> Interpreting simple regression</a></li>
-<li class="chapter" data-level="6.4" data-path="regression.html"><a href="regression.html#multiple-regression-basics"><i class="fa fa-check"></i><b>6.4</b> Multiple regression basics</a></li>
-<li class="chapter" data-level="6.5" data-path="regression.html"><a href="regression.html#example-studies"><i class="fa fa-check"></i><b>6.5</b> Example studies</a>
+<li class="chapter" data-level="5.1" data-path="correlation.html"><a href="correlation.html#how-do-we-measure-relationships"><i class="fa fa-check"></i><b>5.1</b> How do we measure relationships</a>
 <ul>
-<li class="chapter" data-level="6.5.1" data-path="regression.html"><a href="regression.html#example-study-i-leung-and-lee-2014"><i class="fa fa-check"></i><b>6.5.1</b> Example study I (Leung and Lee, 2014)</a></li>
+<li class="chapter" data-level="5.1.1" data-path="correlation.html"><a href="correlation.html#defining-covariance"><i class="fa fa-check"></i><b>5.1.1</b> Defining covariance</a></li>
+<li class="chapter" data-level="5.1.2" data-path="correlation.html"><a href="correlation.html#standardization-and-the-correlation-efficient"><i class="fa fa-check"></i><b>5.1.2</b> Standardization and the correlation efficient</a></li>
+<li class="chapter" data-level="5.1.3" data-path="correlation.html"><a href="correlation.html#significance-of-the-correlation-coefficient"><i class="fa fa-check"></i><b>5.1.3</b> Significance of the correlation coefficient</a></li>
+<li class="chapter" data-level="5.1.4" data-path="correlation.html"><a href="correlation.html#confidence-intervals-for-r"><i class="fa fa-check"></i><b>5.1.4</b> Confidence intervals for <em>r</em></a></li>
+<li class="chapter" data-level="5.1.5" data-path="correlation.html"><a href="correlation.html#warning-for-concluding-to-causality"><i class="fa fa-check"></i><b>5.1.5</b> Warning for concluding to causality</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="correlation.html"><a href="correlation.html#bivariate-correlation"><i class="fa fa-check"></i><b>5.2</b> Bivariate correlation</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="correlation.html"><a href="correlation.html#pearsons-r"><i class="fa fa-check"></i><b>5.2.1</b> Pearson’s r</a></li>
+<li class="chapter" data-level="5.2.2" data-path="correlation.html"><a href="correlation.html#spearmans-rho"><i class="fa fa-check"></i><b>5.2.2</b> Spearman’s rho</a></li>
+<li class="chapter" data-level="5.2.3" data-path="correlation.html"><a href="correlation.html#kendalls-tau"><i class="fa fa-check"></i><b>5.2.3</b> Kendall’s tau</a></li>
+<li class="chapter" data-level="5.2.4" data-path="correlation.html"><a href="correlation.html#bootstrap-correlations"><i class="fa fa-check"></i><b>5.2.4</b> Bootstrap correlations</a></li>
+<li class="chapter" data-level="5.2.5" data-path="correlation.html"><a href="correlation.html#biserial-and-point-biserial-correlations"><i class="fa fa-check"></i><b>5.2.5</b> Biserial and point-biserial correlations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="correlation.html"><a href="correlation.html#partial-correlation"><i class="fa fa-check"></i><b>5.3</b> Partial correlation</a></li>
+<li class="chapter" data-level="5.4" data-path="correlation.html"><a href="correlation.html#comparing-correlations"><i class="fa fa-check"></i><b>5.4</b> Comparing correlations</a></li>
+<li class="chapter" data-level="5.5" data-path="correlation.html"><a href="correlation.html#computing-effect-size-and-reporting-results"><i class="fa fa-check"></i><b>5.5</b> Computing effect size and reporting results</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="logistic-regression.html"><a href="logistic-regression.html"><i class="fa fa-check"></i><b>6</b> Logistic regression</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="logistic-regression.html"><a href="logistic-regression.html#example-studies"><i class="fa fa-check"></i><b>6.1</b> Example studies</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="logistic-regression.html"><a href="logistic-regression.html#example-study-1-m%C3%BCller-bach-2021"><i class="fa fa-check"></i><b>6.1.1</b> Example study 1 (Müller &amp; Bach, 2021)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="logistic-regression.html"><a href="logistic-regression.html"><i class="fa fa-check"></i><b>7</b> Logistic regression</a>
+<li class="chapter" data-level="7" data-path="comparing-two-means-t-test.html"><a href="comparing-two-means-t-test.html"><i class="fa fa-check"></i><b>7</b> Comparing two means (t-test)</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="logistic-regression.html"><a href="logistic-regression.html#example-studies-1"><i class="fa fa-check"></i><b>7.1</b> Example studies</a>
+<li class="chapter" data-level="7.1" data-path="comparing-two-means-t-test.html"><a href="comparing-two-means-t-test.html#example-studies-1"><i class="fa fa-check"></i><b>7.1</b> Example studies</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="logistic-regression.html"><a href="logistic-regression.html#example-study-1-m%C3%BCller-bach-2021"><i class="fa fa-check"></i><b>7.1.1</b> Example study 1 (Müller &amp; Bach, 2021)</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="comparing-two-means-t-test.html"><a href="comparing-two-means-t-test.html"><i class="fa fa-check"></i><b>8</b> Comparing two means (t-test)</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="comparing-two-means-t-test.html"><a href="comparing-two-means-t-test.html#example-studies-2"><i class="fa fa-check"></i><b>8.1</b> Example studies</a>
-<ul>
-<li class="chapter" data-level="8.1.1" data-path="comparing-two-means-t-test.html"><a href="comparing-two-means-t-test.html#example-study-i-ohme-et-al.-2016"><i class="fa fa-check"></i><b>8.1.1</b> Example study I (Ohme et al., 2016)</a></li>
+<li class="chapter" data-level="7.1.1" data-path="comparing-two-means-t-test.html"><a href="comparing-two-means-t-test.html#example-study-i-ohme-et-al.-2016"><i class="fa fa-check"></i><b>7.1.1</b> Example study I (Ohme et al., 2016)</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -247,7 +258,290 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="correlation" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Correlation<a href="correlation.html#correlation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="how-do-we-measure-relationships" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> How do we measure relationships<a href="correlation.html#how-do-we-measure-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="defining-covariance" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Defining covariance<a href="correlation.html#defining-covariance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Variance -&gt; square errors divided by degree of freedom</p>
+<p>Covariance</p>
+<ul>
+<li><p>Essentially, an expression of the relationship between variables, i.e., the relatedness of two variables, i.e., the extent of similarity between patterns of differences of the two variables.</p></li>
+<li><p>is the cross-product deviations (multiplying the deviations of one variable by the corresponding deviation of a second variable) divided by degree of freedom.</p></li>
+<li><p>However, the scale of covariance is dependent on the scale of measurement. Therefore we need a process of <em>standardization</em> to set the measurements to the same unit, therefore the numbers are comparable.</p></li>
+</ul>
+</div>
+<div id="standardization-and-the-correlation-efficient" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Standardization and the correlation efficient<a href="correlation.html#standardization-and-the-correlation-efficient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Standardization</p>
+<ul>
+<li><p>Conversion of a value that is dependent on the measurement scale into a standard set of units.</p></li>
+<li><p>To standardize the deviation of the mean from one variable, we can divide the observed deviation by the standard deviation.</p>
+<ul>
+<li>recap: standard deviation is the square root of the variance.</li>
+</ul></li>
+<li><p>When there are two variables and we want to standardize the covariance, we can first multiply the two standard deviation of the two variables, and then divide the covariance by the multiplied product. This value is known as <em>r</em>, the <em>correlation coefficient</em>.</p></li>
+</ul>
+<p>Correlation coefficient</p>
+<ul>
+<li><p>aka Pearson product-moment correlation coefficient, or Pearson correlation coefficient</p></li>
+<li><p>Value lies within -1 and 1.</p></li>
+<li><p>… is an expression of standardized the measure of an observed effect. Commonly, values of ±.1 -&gt; small effect, ±.3 -&gt; medium effect, and ±.5 is a large effect.</p></li>
+</ul>
+</div>
+<div id="significance-of-the-correlation-coefficient" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Significance of the correlation coefficient<a href="correlation.html#significance-of-the-correlation-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>To test the hypothesis that the observed coefficient is different from zero</p></li>
+<li><p>We need to transform our r to z.score to observe it in a normal distribution</p></li>
+</ul>
+</div>
+<div id="confidence-intervals-for-r" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Confidence intervals for <em>r</em><a href="correlation.html#confidence-intervals-for-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="warning-for-concluding-to-causality" class="section level3 hasAnchor" number="5.1.5">
+<h3><span class="header-section-number">5.1.5</span> Warning for concluding to causality<a href="correlation.html#warning-for-concluding-to-causality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We cannot assume causality just for the existence of a significant correlation coefficient.</p>
+<ul>
+<li><p>The third-variable problem</p></li>
+<li><p>The unknown direction of causality</p></li>
+</ul>
+</div>
+</div>
+<div id="bivariate-correlation" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Bivariate correlation<a href="correlation.html#bivariate-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>… us a cirrrelation between two variables, including</p>
+<div id="pearsons-r" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Pearson’s r<a href="correlation.html#pearsons-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Assumptions:</p>
+<ol style="list-style-type: decimal">
+<li><p>Interval data</p></li>
+<li><p>If one wants to prove significance, the sampling distributions need to be normally distributed, that is, our sample data are normally distributed (or if we have a large sample) .</p></li>
+</ol>
+<p>-&gt; I’m practically lost at this sentence so I asked AI:</p>
+<ol style="list-style-type: lower-alpha">
+<li>The “Sampling Distribution” (The Hypothetical Universe)</li>
+</ol>
+<p>When you calculate Pearson’s r, you get one number (e.g., r=0.5). But to “prove significance,” a computer asks: “If there was actually zero relationship in the real world, how likely is it that I’d accidentally stumble upon an r=0.5 just by luck?”</p>
+<p>To answer this, it imagines a sampling distribution—a bell curve of every possible r value you could have gotten from thousands of random samples.</p>
+<ul>
+<li><p>The Problem: The math used to calculate your p-value (the t-test) assumes this “hypothetical universe” of results follows a specific, predictable shape (a t-distribution).</p></li>
+<li><p>The Link: If your sample data is normally distributed, the sampling distribution will also be well-behaved and match that math.</p></li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>The “Large Sample” Escape Hatch</li>
+</ol>
+<p>The statement mentions: “…or if we have a large sample.” This is a reference to the Central Limit Theorem (CLT).</p>
+<p>In statistics, “Large” usually means a sample size of n&gt;30 (though more is always better). The CLT is like a magic wand: it says that as your sample size grows, the sampling distribution will become normally distributed even if your raw data is messy, skewed, or weird.</p>
+<ul>
+<li>Why this is a relief: It means you don’t need “perfect” data to get a valid p-value, as long as you have enough participants.</li>
+</ul>
+<p>How to do it in R:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="correlation.html#cb8-1" tabindex="-1"></a><span class="fu">cor</span>(x, y, </span>
+<span id="cb8-2"><a href="correlation.html#cb8-2" tabindex="-1"></a>    <span class="at">use =</span> <span class="st">&quot;string&quot;</span>, </span>
+<span id="cb8-3"><a href="correlation.html#cb8-3" tabindex="-1"></a>    <span class="co"># everything -&gt; NA for pairs that contain NA</span></span>
+<span id="cb8-4"><a href="correlation.html#cb8-4" tabindex="-1"></a>    <span class="co"># all.obs -&gt; error meassage if there is any NA in the data</span></span>
+<span id="cb8-5"><a href="correlation.html#cb8-5" tabindex="-1"></a>    <span class="co"># complete.obs -&gt; correlations are computed from only cases that are complete for all vars -&gt; more exclusive for NAs</span></span>
+<span id="cb8-6"><a href="correlation.html#cb8-6" tabindex="-1"></a>    <span class="co"># pairwise.complete.obs -&gt; correlations between pairs of bars are computed for cases that are complete for these two vars</span></span>
+<span id="cb8-7"><a href="correlation.html#cb8-7" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">&quot;correlation type&quot;</span></span>
+<span id="cb8-8"><a href="correlation.html#cb8-8" tabindex="-1"></a>    <span class="co"># pearson, spearman, or kendall</span></span>
+<span id="cb8-9"><a href="correlation.html#cb8-9" tabindex="-1"></a>    )</span>
+<span id="cb8-10"><a href="correlation.html#cb8-10" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="correlation.html#cb8-11" tabindex="-1"></a><span class="co"># e.g.,</span></span>
+<span id="cb8-12"><a href="correlation.html#cb8-12" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y, <span class="at">use =</span> <span class="st">&quot;complete.obs&quot;</span>, <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>)</span>
+<span id="cb8-13"><a href="correlation.html#cb8-13" tabindex="-1"></a><span class="fu">cor</span>(df[, <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)]) <span class="co"># produce a matrix for three pairs of correlation</span></span>
+<span id="cb8-14"><a href="correlation.html#cb8-14" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="correlation.html#cb8-15" tabindex="-1"></a><span class="co"># other functions</span></span>
+<span id="cb8-16"><a href="correlation.html#cb8-16" tabindex="-1"></a><span class="fu">cor.test</span>()</span>
+<span id="cb8-17"><a href="correlation.html#cb8-17" tabindex="-1"></a>Hmisc<span class="sc">::</span><span class="fu">rcorr</span>(x, y, <span class="at">type =</span> <span class="st">&quot;correlation type&quot;</span>)</span></code></pre></div>
+<div id="interpreting-r-square" class="section level4 hasAnchor" number="5.2.1.1">
+<h4><span class="header-section-number">5.2.1.1</span> Interpreting R square<a href="correlation.html#interpreting-r-square" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Correlation coefficient square, aka coefficient of determination, is the square of r coefficient. It measures the amount of variability of one variable that is shared by the other one.</p>
+<p>For example, if the coefficient r of bad weather and mood swing is -0.4, the R square will be 0.16. Therefore even though the two vars are nicely correlated, bad weather is still only accounted for 16% of the variation in mood swing. (this is still not an evidence of causality)</p>
+</div>
+</div>
+<div id="spearmans-rho" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Spearman’s rho<a href="correlation.html#spearmans-rho" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Same logic as Pearson’s r, but deals with rank data / ordinal data (categories with meaningful order)</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="correlation.html#cb9-1" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>x, df<span class="sc">$</span>y, <span class="at">use =</span> <span class="st">&quot;complete.obs&quot;</span>, <span class="at">method =</span> <span class="st">&quot;spearman&quot;</span>)</span></code></pre></div>
+</div>
+<div id="kendalls-tau" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Kendall’s tau<a href="correlation.html#kendalls-tau" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Similar to Spearman’s rho, it deals with non-parametric data, but better suited for cases of small dataset with a large number of tied rank.</p>
+</div>
+<div id="bootstrap-correlations" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Bootstrap correlations<a href="correlation.html#bootstrap-correlations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>More in section 6.5.7</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="correlation.html#cb10-1" tabindex="-1"></a><span class="fu">boot</span>(data, <span class="cf">function</span>, replications)</span></code></pre></div>
+</div>
+<div id="biserial-and-point-biserial-correlations" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Biserial and point-biserial correlations<a href="correlation.html#biserial-and-point-biserial-correlations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Point-biserial coefficient</li>
+</ul>
+<p>For discrete dichonomous variable, i.e., binary variable with no continuum in between 0 and 1 (e.g, pregnancy)</p>
+<ul>
+<li>Biserial coefficient</li>
+</ul>
+<p>For variable with continuous dichonomy, where an unterlying continuum exisits between 0 and 1 (e.g., pass and fail, where there are many grades in between)</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="correlation.html#cb11-1" tabindex="-1"></a><span class="fu">library</span>(polycor)</span>
+<span id="cb11-2"><a href="correlation.html#cb11-2" tabindex="-1"></a>polycor<span class="sc">::</span><span class="fu">polyserial</span>(df<span class="sc">&amp;</span>x, df<span class="sc">&amp;</span>y)</span></code></pre></div>
+</div>
+</div>
+<div id="partial-correlation" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Partial correlation<a href="correlation.html#partial-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Partial correlation is used when we want to examine the relationship between two variables in which the effect of a third variable is present and held constant. To put it differently, var A accounted for 15% of the variances of var C, var B accounted for 20% of the variances of var C, and there is 5% of variances of var C accounted jointly by var A and B. And then we know that there is 10% of variances of var C accounted uniquely by var A, and 15% of such accounted uniquely by var B.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="correlation.html#cb12-1" tabindex="-1"></a><span class="fu">library</span>(ggm)</span>
+<span id="cb12-2"><a href="correlation.html#cb12-2" tabindex="-1"></a>pc <span class="ot">&lt;-</span> ggm<span class="sc">::</span><span class="fu">pcor</span>(<span class="fu">c</span>(A, B, C), df) <span class="co"># in this case we are looking at the unique variances of A accounted by B, with the effect of C held constant</span></span>
+<span id="cb12-3"><a href="correlation.html#cb12-3" tabindex="-1"></a>pc<span class="sc">^</span><span class="dv">2</span> <span class="co"># R square</span></span></code></pre></div>
+<p>Semi-partial correlation, aka part correlation, where the third variable’s effect was controlled only for one of the variables in the relationship, and in partial correlation, the effect for both variables in the correlation is controlled.</p>
+<p>Therefore, partial correlation is used when one wants to look at the unique relationship between two vars when the third var is completely ruled out, and the semi-partial correlation is used when trying to explain the variance in the outcome from a set of predictor variables. (-&gt; see multiple regression?)</p>
+</div>
+<div id="comparing-correlations" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Comparing correlations<a href="correlation.html#comparing-correlations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Independent <em>r</em>s</li>
+</ul>
+<p>r calculated from different samples, e.g., men and women.</p>
+<p>We convert these <em>r</em>s to z value to make the smapling distribution normal, and then we compare the value. (see the additional material mentioned in p.239 for more information on calculation in R)</p>
+<ul>
+<li>Dependent <em>r</em>s</li>
+</ul>
+<p>see more at page 239</p>
+</div>
+<div id="computing-effect-size-and-reporting-results" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Computing effect size and reporting results<a href="correlation.html#computing-effect-size-and-reporting-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First of all, correlation coefficients <em>are</em> effect sizes.</p>
+<p>However, the R square of Spearman’s rho needs to be interpreted slighlty different, as they represent the proportion of variances in the ranks that two vars share. See more at 240</p>
+<ul>
+<li>Syntax of reporting</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>if you follow the conventions of the American Psychological Association, there should be no zero before the decimal point for the correlation coefficient or the probability value (because neither can exceed 1);</p></li>
+<li><p>coefficients are reported to 2 decimal places;</p></li>
+<li><p>if you are quoting a one-tailed probability, you should say so;</p></li>
+<li><p>each correlation coefficient is represented by a different letter (and some of them are Greek); and</p></li>
+<li><p>there are standard criteria of probabilities that we use (.05, .01 and .001).</p></li>
+</ol>
+<ul>
+<li>Example of reporting correlation</li>
+</ul>
+<p>There was a significant relationship between the number of adverts watched and the number of packets of sweets purchased, r = .87, p (one-tailed) &lt; .05.</p>
+<p>Exam performance was significantly correlated with exam anxiety, r = −.44, and time spent revising, r = .40; the time spent revising was also correlated with exam anxiety, r = −.71 (all ps &lt; .001).</p>
+<p>Creativity was significantly related to how well people did in the World’s Biggest Liar competition, rs = −.37, p &lt; .001.</p>
+<p>Creativity was significantly related to how well people did in the World’s Biggest Liar competition, τ = −.30, p &lt; .001. (Note that I’ve quoted Kendall’s
+τ here.)</p>
+<p>The gender of the cat was significantly related to the time the cat spent away from home, rpb = .38, p &lt; .01.</p>
+<p>The gender of the cat was significantly related to the time the cat spent away from home, rb = .48, p &lt; .01.</p>
+<table style="width:6%;">
+<colgroup>
+<col width="5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Q. is r/r square an expression of effect size?</td>
+</tr>
+<tr class="even">
+<td>Q. how come that squaring of r can be the value to represent the percentage of the variability?</td>
+</tr>
+<tr class="odd">
+<td>Q. why do we need another calculation to compare r?</td>
+</tr>
+<tr class="even">
+<td><!--chapter:end:05-correlations.Rmd--></td>
+</tr>
+<tr class="odd">
+<td># Regression</td>
+</tr>
+<tr class="even">
+<td>## Introduction to regression</td>
+</tr>
+<tr class="odd">
+<td>## General procedure for regression analysis</td>
+</tr>
+<tr class="even">
+<td>## Interpreting simple regression</td>
+</tr>
+<tr class="odd">
+<td>## Multiple regression basics</td>
+</tr>
+<tr class="even">
+<td>## Example studies</td>
+</tr>
+<tr class="odd">
+<td>### Example study I (Leung and Lee, 2014)</td>
+</tr>
+<tr class="even">
+<td>- Objective</td>
+</tr>
+<tr class="odd">
+<td>Study the consumption of online alternative media, mainly the drives (predictors) and consequences (impacts) of such consumption.</td>
+</tr>
+<tr class="even">
+<td>- RQ and hypothesis</td>
+</tr>
+<tr class="odd">
+<td>- Hypothesis 1: <em>Support for democratization</em> relates positively to Internet alternative media usage.</td>
+</tr>
+<tr class="even">
+<td>- Hypothesis 2: <em>Perception of media self-censorship</em> relates positively to Internet alternative media usage.</td>
+</tr>
+<tr class="odd">
+<td>- Hypothesis 3: <em>News acquisition via Facebook</em> relates positively to Internet alternative media usage.</td>
+</tr>
+<tr class="even">
+<td>- Hypothesis 4: The relationship stipulated in Hypothesis 3 is stronger among <em>supporters of democratization</em>.</td>
+</tr>
+<tr class="odd">
+<td>- Hypothesis 5: The relationship stipulated in Hypothesis 3 is stronger among people who <em>perceive media self-censorship as serious</em>.</td>
+</tr>
+<tr class="even">
+<td>- Hypothesis 6: Internet alternative media usage relates positively to <em>protest participation</em>.</td>
+</tr>
+<tr class="odd">
+<td>- Hypothesis 7: Internet alternative media usage relates positively to <em>support for the planned civil disobedience campaign for universal suffrage</em>.</td>
+</tr>
+<tr class="even">
+<td>- Hypothesis 8: The relationships stipulated in Hypotheses 6 and 7 are stronger among <em>supporters of democratization</em>.</td>
+</tr>
+<tr class="odd">
+<td>The selection of the variables is based on hypotheses, which were traced essentially back to theories.</td>
+</tr>
+<tr class="even">
+<td>- Method</td>
+</tr>
+<tr class="odd">
+<td>Data: survey data</td>
+</tr>
+<tr class="even">
+<td>Analysis:</td>
+</tr>
+<tr class="odd">
+<td>2 hierarchichal regression models targeting different sets of hypos (predictors + impacts).</td>
+</tr>
+<tr class="even">
+<td>“The regression model contains all the <strong>controls</strong>, the <strong>main effect variables</strong> for Hypotheses 1 to 3 (i.e., support for democratization, perceived media self-censorship, and news acquisition via social media), and <strong>two interaction terms</strong> for testing Hypotheses 4 and 5 (News acquisition via social media × Support for democratization, and News acquisition via social media × Perceived self-censorship). The interaction terms were centered by means to reduce multicollinearity.” (Leung and Lee, 2014, p. 349)</td>
+</tr>
+<tr class="odd">
+<td><img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/keung_lee_table1.png" width="600"/></td>
+</tr>
+<tr class="even">
+<td>“We can now turn to the impact of Internet alternative media usage on protest participation and attitude toward civil disobedience as suggested in Hypotheses 6 to 8. Two hierarchical regression analyses were conducted for the purpose. The independent variables are largely the same as those in Table 1. The only exceptions are the omission of perceived media self-censorship (which is not central to explain protest participation) and that the interaction between news acquisition via social media and perceived media self-censorship is replaced by Internet alternative media usage × Support for democratization, the interaction term central to Hypothesis 8. The interaction between news acquisition via social media and support for democratization is retained for illustrative purposes.” (Leung and Lee, 2014, p. 351)</td>
+</tr>
+<tr class="odd">
+<td><img src="https://raw.githubusercontent.com/milin-zhang/statistics/master/images/keung_lee_table2.png" width="600"/></td>
+</tr>
+</tbody>
+</table>
+<p>note for further study</p>
+<ul>
+<li><p>interaction term as a variable in the regression model, how?</p></li>
+<li><p>why do you need to center the terms by means to reduce multicollinearity?</p></li>
+<li><p>classic imputation strategies for missing values (“missing values were replaced by means”)</p></li>
+<li><p>how to interpret R2 and the triangle R2?</p></li>
+</ul>
+<p>citation: Leung, D. K. K., &amp; Lee, F. L. F. (2014). Cultivating an Active Online Counterpublic: Examining Usage and Political Impact of Internet Alternative Media. The International Journal of Press/Politics, 19(3), 340-359. <a href="https://doi.org/10.1177/1940161214530787" class="uri">https://doi.org/10.1177/1940161214530787</a> (Original work published 2014)</p>
 
+</div>
 </div>
             </section>
 
@@ -255,7 +549,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="statistical-assumptions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="logistic-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -286,7 +580,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/milin-zhang/statistics/edit/main/05-correlations.Rmd",
+"link": "https://github.com/milin-zhang/statistics/edit/main/06-Regression.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -294,7 +588,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/milin-zhang/statistics/blob/main/05-correlations.Rmd",
+"link": "https://github.com/milin-zhang/statistics/blob/main/06-Regression.Rmd",
 "text": null
 },
 "download": null,
