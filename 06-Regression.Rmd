@@ -10,15 +10,31 @@ The goal of finding a suitable regression model is usually achieved by finding t
 
 -   Goodness of fit
 
-    -   Sum of squares
+1. Sum of squares
 
-  - R
+SST: total sum of squares, i.e., total amount of differences between the most basic model, mean, from the real data
 
+SSR: residual sum of squares, i.e., total amount of differences between the chosen model, e.g., the best-fitting regression model, and the real data.
 
+SSM: model sum of square, the difference between SST and SSR, which is the reduced difference after applying the model.
 
-  - R squares
+2. R square
 
+R Square = SSM / SST
 
+which represents the variance in the outcome explained by the model (SSM) compared to the variance that is there to be explained in the first place (SST).
+
+The square root of this value is the Pearson's coefficient.
+
+3. F-test
+
+In its general form, F-test statistics represent the amount of systematic variance divided by the amount of unsystematic variance, or to put it differently, the model against the error. In the case of regression, the F statistics is the improvement due to model (SSM) divided by the difference between model and the observed data (SSR).
+
+F = MSM / MSR
+
+MSM = Model mean square = SSM / the number of vars in the model
+
+MSR = Residual mean square = SSR / the number of observation - the number of parameters being estimated. (further explained in ANOVA GLM1)
 
 ## General procedure for regression analysis
 
