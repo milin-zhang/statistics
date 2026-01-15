@@ -23,7 +23,7 @@
 <meta name="author" content="Milin Zhang" />
 
 
-<meta name="date" content="2026-01-09" />
+<meta name="date" content="2026-01-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -220,17 +220,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.5" data-path="correlation.html"><a href="correlation.html#biserial-and-point-biserial-correlations"><i class="fa fa-check"></i><b>5.2.5</b> Biserial and point-biserial correlations</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="correlation.html"><a href="correlation.html#partial-correlation"><i class="fa fa-check"></i><b>5.3</b> Partial correlation</a></li>
-<li class="chapter" data-level="5.4" data-path="correlation.html"><a href="correlation.html#to-examine-the-relationship-between-two-variables-when-a-third-variable-is-present-and-held-constant."><i class="fa fa-check"></i><b>5.4</b> To examine the relationship between two variables when a third variable is present and held constant.</a></li>
+<li class="chapter" data-level="5.4" data-path="correlation.html"><a href="correlation.html#comparing-correlations"><i class="fa fa-check"></i><b>5.4</b> Comparing correlations</a></li>
+<li class="chapter" data-level="5.5" data-path="correlation.html"><a href="correlation.html#computing-effect-size-and-reporting-results"><i class="fa fa-check"></i><b>5.5</b> Computing effect size and reporting results</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="correlation.html"><a href="correlation.html#some-questions"><i class="fa fa-check"></i><b>5.5.1</b> some questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>6</b> Regression</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="regression.html"><a href="regression.html#introduction-to-regression"><i class="fa fa-check"></i><b>6.1</b> Introduction to regression</a></li>
-<li class="chapter" data-level="6.2" data-path="regression.html"><a href="regression.html#general-procedure-for-regression-analysis"><i class="fa fa-check"></i><b>6.2</b> General procedure for regression analysis</a></li>
-<li class="chapter" data-level="6.3" data-path="regression.html"><a href="regression.html#interpreting-simple-regression"><i class="fa fa-check"></i><b>6.3</b> Interpreting simple regression</a></li>
-<li class="chapter" data-level="6.4" data-path="regression.html"><a href="regression.html#multiple-regression-basics"><i class="fa fa-check"></i><b>6.4</b> Multiple regression basics</a></li>
-<li class="chapter" data-level="6.5" data-path="regression.html"><a href="regression.html#example-studies"><i class="fa fa-check"></i><b>6.5</b> Example studies</a>
+<li class="chapter" data-level="6.1" data-path="regression.html"><a href="regression.html#simple-regression"><i class="fa fa-check"></i><b>6.1</b> Simple regression</a>
 <ul>
-<li class="chapter" data-level="6.5.1" data-path="regression.html"><a href="regression.html#example-study-i-leung-and-lee-2014"><i class="fa fa-check"></i><b>6.5.1</b> Example study I (Leung and Lee, 2014)</a></li>
+<li class="chapter" data-level="6.1.1" data-path="regression.html"><a href="regression.html#introduction-to-regression"><i class="fa fa-check"></i><b>6.1.1</b> Introduction to regression</a></li>
+<li class="chapter" data-level="6.1.2" data-path="regression.html"><a href="regression.html#general-procedure-for-simple-regression-analysis"><i class="fa fa-check"></i><b>6.1.2</b> General procedure for simple regression analysis</a></li>
+<li class="chapter" data-level="6.1.3" data-path="regression.html"><a href="regression.html#interpreting-simple-regression"><i class="fa fa-check"></i><b>6.1.3</b> Interpreting simple regression</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="regression.html"><a href="regression.html#multiple-regression"><i class="fa fa-check"></i><b>6.2</b> Multiple regression</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="regression.html"><a href="regression.html#the-basics"><i class="fa fa-check"></i><b>6.2.1</b> The basics</a></li>
+<li class="chapter" data-level="6.2.2" data-path="regression.html"><a href="regression.html#selection-of-variables"><i class="fa fa-check"></i><b>6.2.2</b> Selection of variables</a></li>
+<li class="chapter" data-level="6.2.3" data-path="regression.html"><a href="regression.html#model-accuracy-assessment"><i class="fa fa-check"></i><b>6.2.3</b> Model accuracy assessment</a></li>
+<li class="chapter" data-level="6.2.4" data-path="regression.html"><a href="regression.html#procedures-in-r"><i class="fa fa-check"></i><b>6.2.4</b> Procedures in R</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="regression.html"><a href="regression.html#example-studies"><i class="fa fa-check"></i><b>6.3</b> Example studies</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="regression.html"><a href="regression.html#example-study-i-leung-and-lee-2014"><i class="fa fa-check"></i><b>6.3.1</b> Example study I (Leung and Lee, 2014)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="logistic-regression.html"><a href="logistic-regression.html"><i class="fa fa-check"></i><b>7</b> Logistic regression</a>
@@ -268,22 +281,129 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="regression" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Regression<a href="regression.html#regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="introduction-to-regression" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Introduction to regression<a href="regression.html#introduction-to-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="simple-regression" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Simple regression<a href="regression.html#simple-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-to-regression" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Introduction to regression<a href="regression.html#introduction-to-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Regression is one step further from correlation where we predict the outcome (DV) from one or more variables (IV). Depending on the number of IV, there are simple regression and multiple regression.</p>
+<p>Generally, any data prediction can be expressed with the below equation:</p>
+<p><span class="math inline">\(outcome_i = (model) + error_i\)</span></p>
+<p>The regression equation with regression coefficients can be expressed as:</p>
+<p><span class="math inline">\(Y_i = (b_0 + b_1X_i) + e_i\)</span></p>
+<ul>
+<li>Method of least square</li>
+</ul>
+<p>The goal of finding a suitable regression model is usually achieved by finding the least square, namely the smallest residuals (deviations, difference between the real data and the model) from all the possible model out there.</p>
+<ul>
+<li>Goodness of fit</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Sum of squares</li>
+</ol>
+<p><span class="math inline">\(SS_T\)</span>: total sum of squares, i.e., total amount of differences between the most basic model, mean, from the real data</p>
+<p><span class="math inline">\(SS_R\)</span>: residual sum of squares, i.e., total amount of differences between the chosen model, e.g., the best-fitting regression model, and the real data.</p>
+<p><span class="math inline">\(SS_M\)</span>: model sum of square, the difference between <span class="math inline">\(SS_T\)</span> and <span class="math inline">\(SS_R\)</span>, which is the reduced difference after applying the model.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><span class="math inline">\(R^2\)</span></li>
+</ol>
+<p><span class="math display">\[R^2 = \frac{SS_M}{SS_T}\]</span></p>
+<p>which represents the variance in the outcome explained by the model (<span class="math inline">\(SS_M\)</span>) compared to the variance that is there to be explained in the first place (<span class="math inline">\(SS_T\)</span>).</p>
+<p>The square root of this value is the Pearson’s coefficient.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><span class="math inline">\(F\)</span>-test</li>
+</ol>
+<p>In its general form, F-test statistics represent the amount of systematic variance divided by the amount of unsystematic variance, or to put it differently, the model against the error. In the case of regression, the <span class="math inline">\(F\)</span>-ratio is the improvement due to model (<span class="math inline">\(SS_M\)</span>) divided by the difference between model and the observed data (<span class="math inline">\(SS_R\)</span>).</p>
+<p><span class="math display">\[F = \frac{MS_M}{MR_M}\]</span></p>
+<p>Model mean square (degree of freedom = the number of vars in the model)</p>
+<p><span class="math display">\[MS_M = \frac{SS_M}{df}\]</span></p>
+<p>Residual mean square (degree of freedom = the number of observation - the number of parameters being estimated. (further explained in ANOVA GLM1) )</p>
+<p><span class="math display">\[MS_R = \frac{SS_M}{df} \]</span></p>
 </div>
-<div id="general-procedure-for-regression-analysis" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> General procedure for regression analysis<a href="regression.html#general-procedure-for-regression-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="general-procedure-for-simple-regression-analysis" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> General procedure for simple regression analysis<a href="regression.html#general-procedure-for-simple-regression-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In general, we would want our <span class="math inline">\(b\)</span> coefficient to be significantly different from 0, so that when IV changes, there will be changes in the DV as well. For that, we have <span class="math inline">\(t\)</span>-test to test the null hypothesis that the value of <span class="math inline">\(b\)</span> is 0. If the <span class="math inline">\(t\)</span>-test is significant, we gain confidence that the value of <span class="math inline">\(b\)</span> is not 0 and the IV contributes significantly to our ability to estimate values of the outcome.</p>
+<p>Similar to <span class="math inline">\(F\)</span>-statistics, the <span class="math inline">\(t\)</span>-statistic is also based on the ratio of explained varaince against unexplained variance or error. Here the error term is the standard error, i.e., the standard deviation of the distribution of <span class="math inline">\(b\)</span> from different samples, i.e., the measurement of similarity between <span class="math inline">\(b\)</span>-values across samples and the observed <span class="math inline">\(b\)</span> value in our sample.</p>
+<p><span class="math display">\[t = \frac{b_{observed} - b_{expected}}{SE_b} = \frac{b_{observed}}{SE_b}\]</span></p>
+<p>The values of <span class="math inline">\(t\)</span> have a special distribution that differs according to the degrees of freedom for the test. In regression, the <span class="math inline">\(df\)</span> is <span class="math inline">\(N - p - 1\)</span>, where the <span class="math inline">\(p\)</span> is the number of predictors. Therefore, in simple regression where the number of predictors is 1, the <span class="math inline">\(df\)</span> is <span class="math inline">\(N - 1 -1\)</span>.</p>
+<p>How to do it in R:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="regression.html#cb13-1" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
+<span id="cb13-2"><a href="regression.html#cb13-2" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb13-3"><a href="regression.html#cb13-3" tabindex="-1"></a><span class="fu">library</span>(QuantPsyc)</span>
+<span id="cb13-4"><a href="regression.html#cb13-4" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="regression.html#cb13-5" tabindex="-1"></a>new_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(outcome <span class="sc">~</span> <span class="fu">predictor</span>(s),</span>
+<span id="cb13-6"><a href="regression.html#cb13-6" tabindex="-1"></a>                <span class="at">data =</span> df,</span>
+<span id="cb13-7"><a href="regression.html#cb13-7" tabindex="-1"></a>                <span class="at">na.action =</span> action_when_NAs_exist)</span>
+<span id="cb13-8"><a href="regression.html#cb13-8" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="regression.html#cb13-9" tabindex="-1"></a><span class="co"># interpret results</span></span>
+<span id="cb13-10"><a href="regression.html#cb13-10" tabindex="-1"></a><span class="fu">summary</span>(new_model)</span>
+<span id="cb13-11"><a href="regression.html#cb13-11" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="regression.html#cb13-12" tabindex="-1"></a><span class="co"># Call:</span></span>
+<span id="cb13-13"><a href="regression.html#cb13-13" tabindex="-1"></a><span class="co"># lm(formula = sales ~ adverts, data = album1)</span></span>
+<span id="cb13-14"><a href="regression.html#cb13-14" tabindex="-1"></a><span class="co"># Residuals:</span></span>
+<span id="cb13-15"><a href="regression.html#cb13-15" tabindex="-1"></a><span class="co"># Min       1Q        Median      3Q        Max</span></span>
+<span id="cb13-16"><a href="regression.html#cb13-16" tabindex="-1"></a><span class="co"># -152.949  -43.796   -0.393      37.040    211.866</span></span>
+<span id="cb13-17"><a href="regression.html#cb13-17" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb13-18"><a href="regression.html#cb13-18" tabindex="-1"></a><span class="co"># Coefficients:</span></span>
+<span id="cb13-19"><a href="regression.html#cb13-19" tabindex="-1"></a><span class="co">#             Estimate  Std. Error  t value   Pr(&gt;|t|)</span></span>
+<span id="cb13-20"><a href="regression.html#cb13-20" tabindex="-1"></a><span class="co"># (Intercept) 1.341e+02 7.537e+00   17.799    &lt;2e-16 ***</span></span>
+<span id="cb13-21"><a href="regression.html#cb13-21" tabindex="-1"></a><span class="co"># adverts     9.612e-02 9.632e-03   9.979     &lt;2e-16 ***</span></span>
+<span id="cb13-22"><a href="regression.html#cb13-22" tabindex="-1"></a><span class="co"># ---</span></span>
+<span id="cb13-23"><a href="regression.html#cb13-23" tabindex="-1"></a><span class="co"># Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span></span>
+<span id="cb13-24"><a href="regression.html#cb13-24" tabindex="-1"></a><span class="co"># Residual standard error: 65.99 on 198 degrees of freedom</span></span>
+<span id="cb13-25"><a href="regression.html#cb13-25" tabindex="-1"></a><span class="co"># Multiple R-squared: 0.3346, Adjusted R-squared: 0.3313</span></span>
+<span id="cb13-26"><a href="regression.html#cb13-26" tabindex="-1"></a><span class="co"># F-statistic: 99.59 on 1 and 198 DF, p-value: &lt; 2.2e-16</span></span>
+<span id="cb13-27"><a href="regression.html#cb13-27" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="regression.html#cb13-28" tabindex="-1"></a><span class="do">## Pearson correlation from R-squared</span></span>
+<span id="cb13-29"><a href="regression.html#cb13-29" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fl">0.3346</span>) <span class="co"># square root of the multiple R-squared</span></span></code></pre></div>
 </div>
-<div id="interpreting-simple-regression" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Interpreting simple regression<a href="regression.html#interpreting-simple-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="interpreting-simple-regression" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Interpreting simple regression<a href="regression.html#interpreting-simple-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>F-stats (ANOVA)</li>
+</ol>
+<p>In the results, the <span class="math inline">\(p\)</span> value less than .001, as it tells us that there is less than 0.1% chance that an F-ratio this large would happen if the null hypothesis were true. Therefore, we can confidently say that our model is a better prediction than the model of mean.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Model parameters</li>
+</ol>
+<p><span class="math inline">\(b_0\)</span>, i.e., the intercept is 134.1 and the <span class="math inline">\(b_1\)</span>, i.e., the slope, is 0.096.</p>
 </div>
-<div id="multiple-regression-basics" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Multiple regression basics<a href="regression.html#multiple-regression-basics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="example-studies" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Example studies<a href="regression.html#example-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="example-study-i-leung-and-lee-2014" class="section level3 hasAnchor" number="6.5.1">
-<h3><span class="header-section-number">6.5.1</span> Example study I (Leung and Lee, 2014)<a href="regression.html#example-study-i-leung-and-lee-2014" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="multiple-regression" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Multiple regression<a href="regression.html#multiple-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-basics" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> The basics<a href="regression.html#the-basics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One step further on the basic equation of prediction model, we have:</p>
+<p><span class="math display">\[Y_i = (b_0 + b_1X_{1i} + b_2X_{2i} + ... b_nX_{ni}) + e_i\]</span>
+### Goodness of fit</p>
+<ol style="list-style-type: decimal">
+<li><p>Sum of squares, <span class="math inline">\(R\)</span>, <span class="math inline">\(R^2\)</span> can be interpreted as the same way they were interpreted in simple regression</p></li>
+<li><p>Parsimony-adjusted measures of fit</p></li>
+</ol>
+<p>Akaike Information Criterion (AIC)</p>
+<p>AIC deals with the problem of <span class="math inline">\(R^2\)</span> as it will always increase as you add more variables to the model. AIC can only be interpreted in the context, i.e., used to compare among models. The larger AIC are, the poorer the model fit is.</p>
+<p>Bayesian information criterion (BIC)</p>
+<p>not explained in Andy’s book.</p>
+</div>
+<div id="selection-of-variables" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Selection of variables<a href="regression.html#selection-of-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The selection of variables should be based on therories and previous work, not randomly selected out of personal judgement. When the predictor variables are not correlated, the order of variable entry rarely matters; however, we rarely have completely uncorrelated variables, therefore we need to be careful about the mothod of predictor selection.</p>
+<ul>
+<li><p>Forced entry</p></li>
+<li><p>Stepwise methods</p></li>
+<li><p>All-subsets methods</p></li>
+</ul>
+</div>
+<div id="model-accuracy-assessment" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Model accuracy assessment<a href="regression.html#model-accuracy-assessment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="procedures-in-r" class="section level3 hasAnchor" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Procedures in R<a href="regression.html#procedures-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="example-studies" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Example studies<a href="regression.html#example-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-study-i-leung-and-lee-2014" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Example study I (Leung and Lee, 2014)<a href="regression.html#example-study-i-leung-and-lee-2014" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Objective</li>
 </ul>
@@ -385,6 +505,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

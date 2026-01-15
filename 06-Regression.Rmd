@@ -1,8 +1,18 @@
 # Regression
 
-## Introduction to regression
+## Simple regression
+
+### Introduction to regression
 
 Regression is one step further from correlation where we predict the outcome (DV) from one or more variables (IV). Depending on the number of IV, there are simple regression and multiple regression.
+
+Generally, any data prediction can be expressed with the below equation:
+
+$outcome_i = (model) + error_i$
+
+The regression equation with regression coefficients can be expressed as:
+
+$Y_i = (b_0 + b_1X_i) + e_i$
 
 -   Method of least square
 
@@ -10,37 +20,128 @@ The goal of finding a suitable regression model is usually achieved by finding t
 
 -   Goodness of fit
 
-1. Sum of squares
+1.  Sum of squares
 
-SST: total sum of squares, i.e., total amount of differences between the most basic model, mean, from the real data
+$SS_T$: total sum of squares, i.e., total amount of differences between the most basic model, mean, from the real data
 
-SSR: residual sum of squares, i.e., total amount of differences between the chosen model, e.g., the best-fitting regression model, and the real data.
+$SS_R$: residual sum of squares, i.e., total amount of differences between the chosen model, e.g., the best-fitting regression model, and the real data.
 
-SSM: model sum of square, the difference between SST and SSR, which is the reduced difference after applying the model.
+$SS_M$: model sum of square, the difference between $SS_T$ and $SS_R$, which is the reduced difference after applying the model.
 
-2. R square
+2.  $R^2$
 
-R Square = SSM / SST
+$$R^2 = \frac{SS_M}{SS_T}$$
 
-which represents the variance in the outcome explained by the model (SSM) compared to the variance that is there to be explained in the first place (SST).
+which represents the variance in the outcome explained by the model ($SS_M$) compared to the variance that is there to be explained in the first place ($SS_T$).
 
 The square root of this value is the Pearson's coefficient.
 
-3. F-test
+3.  $F$-test
 
-In its general form, F-test statistics represent the amount of systematic variance divided by the amount of unsystematic variance, or to put it differently, the model against the error. In the case of regression, the F statistics is the improvement due to model (SSM) divided by the difference between model and the observed data (SSR).
+In its general form, F-test statistics represent the amount of systematic variance divided by the amount of unsystematic variance, or to put it differently, the model against the error. In the case of regression, the $F$-ratio is the improvement due to model ($SS_M$) divided by the difference between model and the observed data ($SS_R$).
 
-F = MSM / MSR
+$$F = \frac{MS_M}{MR_M}$$
 
-MSM = Model mean square = SSM / the number of vars in the model
+Model mean square (degree of freedom = the number of vars in the model)
 
-MSR = Residual mean square = SSR / the number of observation - the number of parameters being estimated. (further explained in ANOVA GLM1)
+$$MS_M = \frac{SS_M}{df}$$
 
-## General procedure for regression analysis
+Residual mean square (degree of freedom = the number of observation - the number of parameters being estimated. (further explained in ANOVA GLM1) )
 
-## Interpreting simple regression
+$$MS_R = \frac{SS_M}{df} $$
 
-## Multiple regression basics
+### General procedure for simple regression analysis
+
+In general, we would want our $b$ coefficient to be significantly different from 0, so that when IV changes, there will be changes in the DV as well. For that, we have $t$-test to test the null hypothesis that the value of $b$ is 0. If the $t$-test is significant, we gain confidence that the value of $b$ is not 0 and the IV contributes significantly to our ability to estimate values of the outcome.
+
+Similar to $F$-statistics, the $t$-statistic is also based on the ratio of explained varaince against unexplained variance or error. Here the error term is the standard error, i.e., the standard deviation of the distribution of $b$ from different samples, i.e., the measurement of similarity between $b$-values across samples and the observed $b$ value in our sample.
+
+$$t = \frac{b_{observed} - b_{expected}}{SE_b} = \frac{b_{observed}}{SE_b}$$
+
+The values of $t$ have a special distribution that differs according to the degrees of freedom for the test. In regression, the $df$ is $N - p - 1$, where the $p$ is the number of predictors. Therefore, in simple regression where the number of predictors is 1, the $df$ is $N - 1 -1$.
+
+How to do it in R:
+
+```{r eval=FALSE}
+library(boot)
+library(car)
+library(QuantPsyc)
+
+new_model <- lm(outcome ~ predictor(s),
+                data = df,
+                na.action = action_when_NAs_exist)
+
+# interpret results
+summary(new_model)
+
+# Call:
+# lm(formula = sales ~ adverts, data = album1)
+# Residuals:
+# Min       1Q        Median      3Q        Max
+# -152.949  -43.796   -0.393      37.040    211.866
+# 
+# Coefficients:
+#             Estimate  Std. Error  t value   Pr(>|t|)
+# (Intercept) 1.341e+02 7.537e+00   17.799    <2e-16 ***
+# adverts     9.612e-02 9.632e-03   9.979     <2e-16 ***
+# ---
+# Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# Residual standard error: 65.99 on 198 degrees of freedom
+# Multiple R-squared: 0.3346, Adjusted R-squared: 0.3313
+# F-statistic: 99.59 on 1 and 198 DF, p-value: < 2.2e-16
+
+## Pearson correlation from R-squared
+sqrt(0.3346) # square root of the multiple R-squared
+
+```
+
+### Interpreting simple regression
+
+1.  F-stats (ANOVA)
+
+In the results, the $p$ value less than .001, as it tells us that there is less than 0.1% chance that an F-ratio this large would happen if the null hypothesis were true. Therefore, we can confidently say that our model is a better prediction than the model of mean.
+
+2.  Model parameters
+
+$b_0$, i.e., the intercept is 134.1 and the $b_1$, i.e., the slope, is 0.096.
+
+## Multiple regression
+
+### The basics
+
+One step further on the basic equation of prediction model, we have:
+
+$$Y_i = (b_0 + b_1X_{1i} + b_2X_{2i} + ... b_nX_{ni}) + e_i$$
+### Goodness of fit
+
+1. Sum of squares, $R$, $R^2$ can be interpreted as the same way they were interpreted in simple regression
+
+2. Parsimony-adjusted measures of fit
+
+Akaike Information Criterion (AIC)
+
+AIC deals with the problem of $R^2$ as it will always increase as you add more variables to the model. AIC can only be interpreted in the context, i.e., used to compare among models. The larger AIC are, the poorer the model fit is.
+
+Bayesian information criterion (BIC)
+
+not explained in Andy's book.
+
+### Selection of variables
+
+The selection of variables should be based on therories and previous work, not randomly selected out of personal judgement. When the predictor variables are not correlated, the order of variable entry rarely matters; however, we rarely have completely uncorrelated variables, therefore we need to be careful about the mothod of predictor selection.
+
+- Forced entry
+
+
+- Stepwise methods
+
+
+- All-subsets methods
+
+### Model accuracy assessment
+
+### Procedures in R
+
 
 ## Example studies
 

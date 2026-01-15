@@ -132,11 +132,11 @@ boot(data, function, replications)
 
 ### Biserial and point-biserial correlations
 
-- Point-biserial coefficient
+-   Point-biserial coefficient
 
 For discrete dichonomous variable, i.e., binary variable with no continuum in between 0 and 1 (e.g, pregnancy)
 
-- Biserial coefficient
+-   Biserial coefficient
 
 For variable with continuous dichonomy, where an unterlying continuum exisits between 0 and 1 (e.g., pass and fail, where there are many grades in between)
 
@@ -155,20 +155,19 @@ pc <- ggm::pcor(c(A, B, C), df) # in this case we are looking at the unique vari
 pc^2 # R square
 ```
 
-Semi-partial correlation, aka part correlation, where the third variable's effect was controlled only for one of the variables in the relationship, and in partial correlation, the effect for both variables in the correlation is controlled.                                   
+Semi-partial correlation, aka part correlation, where the third variable's effect was controlled only for one of the variables in the relationship, and in partial correlation, the effect for both variables in the correlation is controlled.
 
-Therefore, partial correlation is used when one wants to look at the unique relationship between two vars when the third var is completely ruled out, and the semi-partial correlation is used when trying to explain the variance in the outcome from a set of predictor variables. (-> see multiple regression?)
+Therefore, partial correlation is used when one wants to look at the unique relationship between two vars when the third var is completely ruled out, and the semi-partial correlation is used when trying to explain the variance in the outcome from a set of predictor variables. (-\> see multiple regression?)
 
 ## Comparing correlations
 
-- Independent *r*s
-
+-   Independent *r*s
 
 r calculated from different samples, e.g., men and women.
 
 We convert these *r*s to z value to make the smapling distribution normal, and then we compare the value. (see the additional material mentioned in p.239 for more information on calculation in R)
 
-- Dependent *r*s
+-   Dependent *r*s
 
 see more at page 239
 
@@ -176,36 +175,36 @@ see more at page 239
 
 First of all, correlation coefficients *are* effect sizes.
 
-However, the R square of Spearman's rho needs to be interpreted slighlty different, as they represent the proportion of variances in the ranks that two vars share. See more at 240
+However, the $R^2$ of Spearman's rho needs to be interpreted slighlty different, as they represent the proportion of variances in the ranks that two vars share. See more at 240
 
-- Syntax of reporting
+-   Syntax of reporting
 
-(1) if you follow the conventions of the American Psychological Association, there should be no zero before the decimal point for the correlation coefficient or the probability value (because neither can exceed 1); 
+(1) if you follow the conventions of the American Psychological Association, there should be no zero before the decimal point for the correlation coefficient or the probability value (because neither can exceed 1);
 
-(2) coefficients are reported to 2 decimal places; 
+(2) coefficients are reported to 2 decimal places;
 
-(3) if you are quoting a one-tailed probability, you should say so; 
+(3) if you are quoting a one-tailed probability, you should say so;
 
-(4) each correlation coefficient is represented by a different letter (and some of them are Greek); and 
+(4) each correlation coefficient is represented by a different letter (and some of them are Greek); and
 
 (5) there are standard criteria of probabilities that we use (.05, .01 and .001).
 
-- Example of reporting correlation
+-   Example of reporting correlation
 
-There was a significant relationship between the number of adverts watched and the number of packets of sweets purchased, r = .87, p (one-tailed) < .05.
+There was a significant relationship between the number of adverts watched and the number of packets of sweets purchased, r = .87, p (one-tailed) \< .05.
 
-Exam performance was significantly correlated with exam anxiety, r = −.44, and time spent revising, r = .40; the time spent revising was also correlated with exam anxiety, r = −.71 (all ps < .001).
+Exam performance was significantly correlated with exam anxiety, r = −.44, and time spent revising, r = .40; the time spent revising was also correlated with exam anxiety, r = −.71 (all $p$s \< .001).
 
-Creativity was significantly related to how well people did in the World’s Biggest Liar competition, rs = −.37, p < .001.
+Creativity was significantly related to how well people did in the World’s Biggest Liar competition, rs = −.37, p \< .001.
 
-Creativity was significantly related to how well people did in the World’s Biggest Liar competition, τ = −.30, p < .001. (Note that I’ve quoted Kendall’s
-τ here.)
+Creativity was significantly related to how well people did in the World’s Biggest Liar competition, τ = −.30, p \< .001. (Note that I’ve quoted Kendall’s τ here.)
 
-The gender of the cat was significantly related to the time the cat spent away from home, rpb = .38, p < .01.
+The gender of the cat was significantly related to the time the cat spent away from home, rpb = .38, p \< .01.
 
-The gender of the cat was significantly related to the time the cat spent away from home, rb = .48, p < .01.
+The gender of the cat was significantly related to the time the cat spent away from home, rb = .48, p \< .01.
 
----
+### some questions
+
 Q. is r/r square an expression of effect size?
 
 Q. how come that squaring of r can be the value to represent the percentage of the variability?
